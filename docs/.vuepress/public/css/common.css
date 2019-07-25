@@ -1,0 +1,39 @@
+/* 背景、鼠标指针*/
+body {
+    background: url('../img/bg.jpg');
+    cursor: url('../img/cursor.ani'), url('../img/cursor.gif'), auto !important;
+}
+/* 删除线及删除线链接灰色 */
+strike, strike > a {
+    color: gray;
+}
+.info {
+    color: gray;
+}
+.danger {
+    color: red;
+    text-decoration: underline;
+}
+.warning {
+    color: orange;
+    text-decoration: underline;
+}
+.navbar {
+    border-bottom: 1px solid rgba(218, 218, 218, 0.3) !important;
+}
+h2 {
+    border: none !important;
+}
+.sidebar {
+    border-right: 1px solid rgba(218, 218, 218, 0.3) !important;
+}
+.navbar {
+    background: rgba(222, 245, 251, 0.7) !important;
+}
+.sidebar, .navbar .links {
+    background-color: initial !important;
+}
+p > code, li > code {
+    color: #FF7BB0 !important;
+    background: rgba(92, 92, 92, 0.8) !important;
+}
