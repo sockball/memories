@@ -57,6 +57,14 @@ module.exports = {
                     ['/git/error', 'git'],
                 ]
             },
+            {
+                title: '读书笔记',
+                collapsable: true,
+                children: [
+                    ['/book/high_performance_mysql', '高性能MySql'],
+                    ['/book/modern_php', 'Mordern PHP'],
+                ]
+            },
             ['/repo/', '常用库'],
         ],
         lastUpdated: 'Last Updated',
