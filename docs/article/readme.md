@@ -10,6 +10,7 @@
 * [渐变色示例](https://uigradients.com/)
 * [概念性页面加载动画](https://medium.com/@ann.green/loading-indicators-e9d9ac9680b)
 * [Web前端开发评测系统](http://scriptoj.mangojuice.top/)
+* [css特效](https://cssfx.dev)
 
 ## Web后端
 
@@ -64,6 +65,7 @@
 * [在线制作数据库关系工具](https://dbdiagram.io)
 * [Youtube教育频道翻译小组](https://crashcourse.club/)
 * [服务器消息推送至微信的工具](https://sc.ftqq.com/3.version)
+* [kindle电子书分享](https://kindle.51nazhun.pub/)
 
 ## Funny
 

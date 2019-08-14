@@ -17,6 +17,8 @@
 * [pinyin](https://github.com/overtrue/pinyin)：基于词库的中文转拼音
 * [live2D](https://github.com/xiazeyu/live2d-widget.js)
 * [Sortable](https://github.com/SortableJS/Sortable)：拖拽排序
+* [js-cloudimage-360-view](https://github.com/scaleflex/js-cloudimage-360-view)：可以360度旋转观看图片
+* [utterances](https://github.com/utterance/utterances)：可以将 GitHub 的 issue 当作评论系统，插入第三方网页
 
 ## Other
 

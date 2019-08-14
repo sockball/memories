@@ -4,7 +4,7 @@ body {
     cursor: url('../img/cursor.ani'), url('../img/cursor.gif'), auto !important;
 }
 /* 删除线及删除线链接灰色 */
-strike, strike > a {
+strike, strike > a, s {
     color: gray;
 }
 .info {
@@ -35,5 +35,5 @@ h2 {
 }
 p > code, li > code {
     color: #FF7BB0 !important;
-    background: rgba(92, 92, 92, 0.8) !important;
+    background: #4d646b !important;
 }

@@ -45,7 +45,7 @@ ctrl + r     # 恢复撤销
 
 * 编辑 `/etc/rc.local` 文件，直接加入命令
 * 编写成shell文件放入 `/etc/init.d` 下
-* <strike>配置chkconfig</strike>
+* ~~配置chkconfig~~
 
 ## rsync远程同步(复制)
 

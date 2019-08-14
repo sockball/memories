@@ -30,6 +30,7 @@ module.exports = {
                             ['/php/xdebug', 'xdebug'],
                             ['/php/export_to_csv', 'CSV导出'],
                             ['/php/apache_bench', 'ApacheBench'],
+                            ['/php/interview', '面试'],
                         ]
                     },
                     {
