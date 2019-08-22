@@ -13,6 +13,7 @@ module.exports = {
             { text: 'Twitter', link: 'https://twitter.com/yuzu_hime07' },
         ],
         sidebar: [
+            ['/changelog/', 'CHANGELOG'],
             ['/', '首页'],
             ['/article/', '文章'],
             {

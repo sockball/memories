@@ -3,9 +3,9 @@
 
 ### TODO LIST
 
-* <span class='danger'>Find a job!!</span> ![](/img/sosg13.png)
+* <span class='danger'>Find a good job!!</span> ![](/img/sosg13.png)
 
-* 增加changelog
+* ~~增加changelog~~
 
 * ~~添加常用库内容~~
 

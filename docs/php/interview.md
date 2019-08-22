@@ -11,7 +11,7 @@
     // true js为false
     '0123' == '123';
 
-    // Abc name会转换为0，赋值的数组会转换为Array符串并使用ord()函数取得首字母ASCII码再转换得到A
+    // Abc name会转换为0，赋值的数组会转换为Array字符串并使用ord()函数取得首字母ASCII码再转换得到A
     $str = 'abc';
     $str['name'] = ['test'];
     echo $str;
@@ -51,6 +51,29 @@
     __construct(); __destruct(); __get(); __set(); __clone(); __autoload();
     __toString(); __invoke(); __sleep(); __wakeup();
     __isset(); __unset(); __call(); __callStatic();
+    ```
+
+* 获取客户端、服务端IP：`$_SERVER['REMOTE_ADDR']`、`$_SERVER['SERVER_ADDR']`
+
+* 写出3种或以上在Linux下获取一个日志文件 login.log 最后10行的命令
+    ```sh
+    tail -n 10 login.log
+
+    # awk 'END{ print NR }' login.log 得到总行数, 也可换成 wc -l login.log | awk '{print $1}'
+    # NR为当前行数
+    awk -v COUNT=$(awk 'END{ print NR }' login.log) 'NR > COUNT - 10 { print $0 }' login.log
+
+    # 先将每行保存至一个数组 索引为行数对10的余数，即1234567890循环，注意理解最后的打印顺序
+    awk '{ buffer[NR % 10] = $0; } END { for (i = NR % 10 + 1; i < 10; i++){ print buffer[i]}; for(i = 0; i <= NR % 10; i++){ print buffer[i]}; }' login.log
+
+    # @see https://unix.stackexchange.com/questions/107387/emulate-tail-with-sed
+    sed -e :a -e '$q;N;11,$D;ba' login.log
+    ```
+
+* 正则
+    ```js
+    // 字符串是否有连续字母出现的正则 
+    /([a-zA-Z])\1/
     ```
 
 ## 名词解释
@@ -241,10 +264,47 @@ Cross Site Scripting，即跨站脚本攻击。攻击者向Web内插入恶意scr
 * **常见设计模式**
     * **工厂模式**  
     工厂模式就是一种包含一个专门用来创建其他对象的方法的类
+
     * **单例模式**  
     单例模式确保某个类只有一个实例，且自行实例化并向整个系统提供这个实例
+        ```php
+        // 仅完成连接的mysql单例模式示例
+        class MySQL_DB
+        {
+            private static $db = null;
+
+            private $config = [
+                'host' => 'host',
+                'user' => 'root',
+                'pwd' => 'password',
+                'db' => 'db_name',
+            ];
+
+            private function __construct()
+            {
+                $db_connect = mysql_connect($this->config('host'), $this->config['user'], $this->config['pwd']);
+                mysql_select_db($this->config['db'], $db_connect) or die('mysql connect error');
+                mysql_query('SET NAMES utf8mb4');
+            }
+
+            // 防止克隆
+            private function __clone() {}
+
+            public static function getInstance()
+            {
+                if (self::$db === null)
+                {
+                    self::$db = new self();
+                }
+
+                return self::$db;
+            }
+        }
+        ```
+
     * **适配器模式**  
     将各种不同的接口方法封装成统一的API
+
     * **观察者模式**  
     观察者模式是一种事件系统，意味着这一模式允许某个类观察另一个类的状态，当被观察的类状态发生改变的时候，观察类可以收到通知并且做出相应的动作;
 
@@ -255,6 +315,22 @@ Cross Site Scripting，即跨站脚本攻击。攻击者向Web内插入恶意scr
     4. 横向扩展：MySQL集群、负载均衡、读写分离
 
     参考：[干货 | 7万字 MySQL优化/面试总结，看这一篇就够了！](https://zhuanlan.zhihu.com/p/53865600)
+
+* **导致MySQL全表扫描的情况**
+    1. 使用左模糊 LIKE  
+        **例子**：`LIKE '%name'` 或 `LIKE '%name%'`  
+        **避免**： 只使用右模糊 `LIKE 'name%'`
+
+    2. 使用了复合索引，但查询条件没有使用前导列  
+        **例子**：建立复合索引 `name, age` ，查询 `WHERE age > 14 AND name = 'Jane'`  
+        **避免**：按复合索引建立时的顺序组装SQL语句
+
+    3. OR条件的使用不当  
+        **例子**：name有索引，age无索引，查询 `WHERE name = 'Jane' OR age = 10`  
+
+    4. 对字段使用运算符或函数  
+        **例子**： `WHERE salary * 0.8 = 1000` 、 `WHERE SUBSTRING(nickname, 1, 3) = 'Jane'`  
+        **避免**：尽量提前将运算简化再组装SQL语句
 
 ## 算法
 
