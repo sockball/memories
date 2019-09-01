@@ -31,6 +31,8 @@ module.exports = {
                             ['/php/xdebug', 'xdebug'],
                             ['/php/export_to_csv', 'CSV导出'],
                             ['/php/apache_bench', 'ApacheBench'],
+                            ['/php/wx_test', '微信测试公众号接入'],
+                            ['/php/composer_publish', '简单发布个人composer包'],
                             ['/php/interview', '面试'],
                         ]
                     },

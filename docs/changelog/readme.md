@@ -1,9 +1,15 @@
 # Change Log
 ---------------
 
+### 2019.09.01
+---------------
+* 增加文章 [微信公众号测试接入](/php/wx_test.html)
+* 增加文章 [简单发布个人composer包](/php/composer_publish.html)
+* other update
+
 ### 2019.08.22
 ---------------
-* 增加 CHANGELOG
+* 增加 [CHANGELOG](/changelog)
 * update readme (增加目录)
 * update interview
 

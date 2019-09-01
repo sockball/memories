@@ -1,9 +1,14 @@
 ### Perface
 ![](/img/sosgII19.png) 总之就是个人笔记站
 
+## Works
+
+* [简单物流整合包](https://github.com/sockball/logistics)
+* [Yii2与Oracle的回顾](https://www.jianshu.com/p/4dcf4b1c527e)
+
 ### TODO LIST
 
-* <span class='danger'>Find a good job!!</span> ![](/img/sosg13.png)
+* ~~Find a good job!! ![](/img/sosg13_gray.png)~~
 
 * ~~增加changelog~~
 

@@ -144,3 +144,4 @@ arr.splice(1, 1, 400, 500)
 * 控制台执行 `document.body.contentEditable='true'` 可直接编辑页面
 * 无限循环简写 `for (;;) {...}`
 * 拥有id的元素会创建全局变量，id即为变量名，控制台可直接使用
+* `+new Date()` 可以快速得到毫秒级时间戳

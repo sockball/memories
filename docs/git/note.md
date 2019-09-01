@@ -63,8 +63,10 @@ vim /etc/passwd
 ```
 
 ## 应用其他分支的commit
-当前分支需要直接应用其他分支某次commit的代码时 在当前分支下可使用  
-`git cherry-pick [commit_hash]`
+当前分支需要直接应用其他分支某次commit的代码时 在当前分支下可使用
+```sh
+git cherry-pick [commit_hash]
+```
 
 ## stash(贮存)相关命令
 
@@ -75,6 +77,14 @@ vim /etc/passwd
 * `git stash drop stash@{0}` 删除指定stash (亦可指定hash)
 * `git stash clear` 清除所有stash
 * [参考](https://www.cnblogs.com/tocy/p/git-stash-reference.html)
+
+## tag相关命令
+
+* `git tag` 查看所有 tag
+* `git tag -a 'v0.1.0' -m '0.1.0'` 创建 v0.1.0 tag 并加上注释 0.1.0
+* `git push origin v0.1.0` 推送指定 tag
+* `git push --tags` 推送所有本地 tag
+* `git tag -d v0.1.0` 删除某个分支
 
 ## other
 

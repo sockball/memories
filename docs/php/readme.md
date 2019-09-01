@@ -1,9 +1,15 @@
 ## composer
 
-* 安装 `curl -sS https://getcomposer.org/installer | php`
+* 安装
+    ```sh
+    curl -sS https://getcomposer.org/installer | php
+    ```
 
-* 元地址为 `https://packagist.org`  
-  更换为国内镜像 `composer config -g repo.packagist composer https://packagist.phpcomposer.com`
+* 元地址为 **https://packagist.org**  
+  更换为国内镜像
+  ```
+  composer config -g repo.packagist composer https://packagist.phpcomposer.com
+  ```
 
 ## 使用file_get_contents发送GET、POST请求
 ```php
@@ -85,7 +91,7 @@ $result = file_get_contents('https://t.17track.net/restapi/track', false, $conte
     ```
 * 非变量string和array支持获取下标 `'1234'[0]` `[1, 2, 3, 4][0]`
 * 增加 `finally` 关键字
-* 可变函数参数 `function foo(...$args)` 但不支持如 `function foo($arg, ...$args)`...
+* 可变函数参数 `function foo($a, $b, ...$args)`
 * 函数参数解包
     ```php
     function add($a, $b, $c)
@@ -100,6 +106,56 @@ $result = file_get_contents('https://t.17track.net/restapi/track', false, $conte
 * use 支持函数和常量 `use const Name\Space\FOO` `use function Name\Space\f`
 * 乘方计算符 `**`
 * [参考](https://blog.csdn.net/fenglailea/article/details/9853645)
+
+## 7.x 版本新特性
+* 参数类型和返回值类型声明：int、float、bool、string、array、限定类名等
+    ```php
+    // 检测字符串是否含有重复字符
+    function hasRepeated(string $str): bool
+    {
+        return preg_match('(\w)\1', $str);
+    }
+    ```
+    特别地：
+    * 参数允许为 null, 则在类型前加一个?
+    * 返回值可为void即没有返回值或返回空（null也不可）
+    ```php
+    function sayHello(?string $str): void
+    {
+        echo 'say ', $str ?? 'hello';
+        return ;
+    }
+    ```
+* NULL合并运算符 `??`
+* define 支持定义常量数组
+    ```php
+    define('CONFIG', [
+        'user' => 'username',
+        'pwd' => 'password',
+    ]);
+    ```
+* 类常量支持设置修饰符
+    ```php
+    class Demo
+    {
+        public const PUBLIC_CONST = 1;
+        protected const PROTECTED_CONST = 2;
+        private const PRIVATE_CONST = 3
+    }
+    ```
+* 短数组语法（类似list)，同时支持指定键名
+    ```php
+    // 交换一个数组任意2个键名的值
+    function interchange($index1, $index2, array &$array): void
+    {
+        [$array[$index2], $array[$index1]] = [$array[$index1], $array[$index2]];
+    }
+
+    // 支持指定键名
+    $user = ['id' => 123, 'name' => 'Liy'];
+    ['id' => $id, 'name' => $name] = $user;
+    ```
+* [参考](https://blog.csdn.net/fenglailea/article/details/52717364)
 
 ## other
 
