@@ -5,6 +5,7 @@
 * [dnmp](https://github.com/yeszao/dnmp)：docker版一键LNMP
 * [chinese-xinhua](https://github.com/pwxcoo/chinese-xinhua)：中华新华字典数据库
 * [PhpSpreadsheet](https://github.com/PHPOffice/PhpSpreadsheet)：php读写Excel
+* [micofostarchive/redis](https://github.com/microsoftarchive/redis)：windows版redis
 
 ## Web前端
 

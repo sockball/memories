@@ -21,6 +21,12 @@
 
     // 1
     echo count(strlen('hello world'));
+    
+    $arr = [1, 2, 3];
+    foreach($arr as &$v){}
+    foreach($arr as $v){}
+    // [1, 2, 2]
+    print_r($arr)
     ```
 
 * 变量类型(8种)
@@ -75,6 +81,30 @@
     // 字符串是否有连续字母出现的正则 
     /([a-zA-Z])\1/
     ```
+
+* 使用yield读取1G文件内容 (一般情况下file函数会将文件整个读入内存)
+    ```php
+    function getLines($file)
+    {
+        $handle = fopen($file, 'r');
+        try {
+            while (!feof($handle)) {
+                yield fget($handle);
+            }
+        } finally {
+            fclose($handle);
+        }
+    }
+
+    $file = '1G.log';
+    foreach (getLines($file) as $line)
+    {
+        echo $line;
+    }
+    ```
+    [参考](https://www.php.net/manual/zh/language.generators.overview.php#112985)
+
+* varchar(2) 可以存取2个中文字符，即长度为字符数而不是字节数
 
 ## 名词解释
 
@@ -210,12 +240,13 @@ Cross Site Scripting，即跨站脚本攻击。攻击者向Web内插入恶意scr
 
 * **进程、线程、协程**
     * **进程**  
-    进程是一个具有一定独立功能的程序关于某个数据集合的一次运行活动。  
-    它是操作系统动态执行的基本单元，至少由一个线程组成  
-    进程是拥有资源的一个独立单位
+    进程是一个具有一定独立功能的程序关于某个数据集合的一次运行活动。（好比一个exe文件为一个类，进程则为其一个实例  
+    它是操作系统进行资源分配和调度基本单元，至少由一个线程组成  
+    进程是拥有资源的一个独立单位  
+    每个CPU同时只能处理一个进程
 
     * **线程**  
-    线程也被称为轻量级进程，是操作系统调度（CPU调度）执行的最小单位。  
+    线程也被称为轻量级进程，是操作系统调度（CPU调度）执行的最小单位，由内核管理和调度  
     线程不拥有系统资源，但可以访问隶属于进程的资源
 
     * **协程**  
@@ -413,6 +444,60 @@ Cross Site Scripting，即跨站脚本攻击。攻击者向Web内插入恶意scr
     }
     ```
 
+* 二分法查找 (在一个正序整形数组中查找指定数的位置)
+    ```php
+    // 非递归形式
+    function binarySearch(array $arr, int $target): int
+    {
+        $leftIndex = 0;
+        $rightIndex = count($arr) - 1;
+
+        while ($leftIndex <= $rightIndex)
+        {
+            $middleIndex = floor(($leftIndex + $rightIndex) / 2);
+            if ($arr[$middleIndex] === $target)
+            {
+                return $middleIndex;
+            }
+            else if ($arr[$middleIndex] > $target)
+            {
+                $rightIndex = $middleIndex - 1;
+            }
+            else
+            {
+                $leftIndex = $middleIndex + 1;
+            }
+        }
+
+        return -1;
+    }
+
+    // 递归形式
+    function binarySearchRecurive(array $arr, int $target, int $leftIndex = 0, ?int $rightIndex = null): int
+    {
+        $rightIndex = $rightIndex ?? (count($arr) - 1);
+
+        if ($leftIndex <= $rightIndex)
+        {
+            $middleIndex = floor(($leftIndex + $rightIndex) / 2);
+            if ($arr[$middleIndex] === $target)
+            {
+                return $middleIndex;
+            }
+            else if ($arr[$middleIndex] > $target)
+            {
+                return binarySearchRecurive($arr, $target, $leftIndex, $middleIndex - 1);
+            }
+            else
+            {
+                return binarySearchRecurive($arr, $target, $middleIndex + 1, $rightIndex);
+            }
+        }
+
+        return -1;
+    }
+    ```
+
 ## 逻辑
 
 * **倒水问题**
@@ -430,8 +515,32 @@ Cross Site Scripting，即跨站脚本攻击。攻击者向Web内插入恶意scr
     两个软硬程度一样但未知的鸡蛋，它们有可能都在一楼就摔碎，也可能从一百层楼摔下来没事。  
     有座100层的建筑，要求用这两个鸡蛋确定哪一层是鸡蛋可以安全落下的最高位置。可以摔碎两个鸡蛋。  
     问最少需要多少次测试，才能得到摔碎鸡蛋的楼层？方案如何？
+    
     * **解答：**：[参考](https://www.cnblogs.com/Matrix_Yao/p/4793823.html)
 
+* **金条问题**
+    * **题面：**  
+    你有一根金条，可以分成7等分。现有一批工人为你工作7天，每天需要给他们一段金条。要求金条只能折断2次，问如何分配
     
+    * **解答：**
+        1. 金条折断2次分成1、2、4分
+        2. 第一天给工人1分金条
+        3. 第二天给工人2分金条并收回1分金条
+        4. 第三天给工人1分金条
+        5. 第四天给工人4分金条并收回1分和2分金条
+        6. 第五天给工人1分金条
+        7. 第六天给工人2分金条并收回1分金条
+        8. 第七天给工人1分金条
 
 ## 网络、操作系统基础
+
+* **输入一个网址至呈现页面所经历的过程**
+    * 浏览器先在缓存中查询是否有要访问的资源，若有则不发起http请求直接从缓存中加载资源
+    * 浏览器根据域名向DNS服务器发起请求查询出对应的IP地址
+    * 浏览器根据IP地址和端口号与服务器建立TCP连接（三次握手
+    * 浏览器向服务器发起HTTP请求并通过HTTP协议将请求信息包装成请求报文（包含请求行、请求头、空行、请求体）发送至服务器
+    * 服务器接收到请求报文后按照HTTP协议进行解析并根据请求信息做相应的业务逻辑处理操作
+    * 在业务逻辑处理完成后，服务器将要返回的数据按照HTTP协议封装成响应报文（包含响应行、响应头、空行、响应体）并发送给浏览器
+    * 浏览器接受到响应报文后按照HTTP协议进行解析并根据响应体数据进行HTML、CSS渲染，执行JS
+    * 解析过程中若遇到外链标签（link、js、img）则浏览器又会向路径地址发出新的请求，同上
+    * [参考](https://blog.csdn.net/rosecurry/article/details/90770699)

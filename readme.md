@@ -21,6 +21,7 @@
         * [ApacheBench](http://yuzu-hime.fun/php/apache_bench.html)
         * [微信公众号测试接入](http://yuzu-hime.fun/php/wx_test.html)
         * [简单发布个人composer包](http://yuzu-hime.fun/php/composer_publish.html)
+        * [PHP yield](http://yuzu-hime.fun/php/php_yield.html)
         * [面试](http://yuzu-hime.fun/php/interview.html)
     * **mysql**
         * [基本](http://yuzu-hime.fun/mysql)

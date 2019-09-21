@@ -23,7 +23,7 @@
 * [try, catch, finally执行顺序](https://segmentfault.com/a/1190000015196493)
 * [php V8JS扩展](https://blog.ni-co.moe/public/558.html)
 * [Java、C++、C#、PHP、Python运算符优先级查询](https://www.sojson.com/operation.html)
-* [php5.3-5.6新特性总结](https://blog.csdn.net/fenglailea/article/details/9853645)
+* ~~[php5.3-5.6新特性总结](https://blog.csdn.net/fenglailea/article/details/9853645)~~
 * [utf8mb4_general_ci与utf8mb4_unicode_ci](http://seanlook.com/2016/10/23/mysql-utf8mb4/)
 * [阻塞、非阻塞、同步、异步](https://www.zhihu.com/question/19732473/answer/23434554)
 * [php yield](http://www.php20.cn/article/148)
@@ -31,6 +31,7 @@
 * [理清PHP在Linxu下执行时的文件权限](https://www.cnblogs.com/vishun/p/6950251.html)
 * [多语言编码的Content-Disposition定义](https://www.jianshu.com/p/c6a5adbc8dda)
 * [如何加固linux服务器](https://acuario.xyz/how-to-secure-your-linux-server/)
+* [在PHP中使用协程实现多任务调度](http://www.laruence.com/2015/05/28/3038.html)
 
 ## Web其他
 
@@ -39,7 +40,7 @@
 * [开源许可证](http://www.ruanyifeng.com/blog/2017/10/open-source-license-tutorial.html)
 * [服务器搭建git仓库](https://www.cnblogs.com/dee0912/p/5815267.html)
 * [git钩子](https://aotu.io/notes/2017/04/10/githooks/)
-* [phpstorm激活](http://idea.lanyus.com/)
+* ~~[phpstorm激活](http://idea.lanyus.com/)~~
 * [http状态码](https://www.cmsky.com/http-status-code/)
 * [Docker100问](https://blog.lab99.org/post/docker-2016-07-14-faq.html)
 * [ipv6是什么](https://zhuanlan.zhihu.com/p/36542469)
@@ -49,6 +50,7 @@
 * [一言API](https://hitokoto.cn)
 * [IM软件专栏](https://blog.csdn.net/column/details/im-hherima.html)
 * [通讯协议与及时通讯](https://www.jianshu.com/p/ca4aeabf55f6)
+* [吞吐量（TPS）、QPS、并发数、响应时间（RT）概念](https://www.cnblogs.com/data2value/p/6220859.html)
 
 ## 工具
 

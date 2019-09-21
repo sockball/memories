@@ -71,7 +71,31 @@ tail -n 10 file
 
 # 监听不断更新的file的变化
 tail -n file
+
+# 查看文件行数
+wc -l sql.log | awk '{print $1}
 ```
+
+## dd命令
+* 创建特定大小文件
+    ```sh
+    # 创建一个1G的test.log文件
+    dd if=/dev/urandom of=test.log bs=4M count=256
+    ```
+* [参考](https://www.cnblogs.com/linuxde/p/8719253.html)
+
+## 手动释放内存
+```sh
+# 将存于buffer中的数据写入至硬盘
+sync
+# drop_caches值有3种：
+# 0 - 默认值，不释放
+# 1 - 释放页缓存
+# 2 - 释放inodes和dentries(目录的数据结构)
+# 3 - 释放所有缓存 
+echo 3 > /proc/sys/vm/drop_caches 
+```
+* 参考：[Linux 下清理系统缓存并释放内存](https://blog.csdn.net/Gavinmiaoc/article/details/80527717)、[什么是PAGECACHE/DENTRIES/INODES?](http://ixyzero.com/blog/archives/3233.html)
 
 ## other
 

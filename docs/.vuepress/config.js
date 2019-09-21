@@ -33,6 +33,7 @@ module.exports = {
                             ['/php/apache_bench', 'ApacheBench'],
                             ['/php/wx_test', '微信测试公众号接入'],
                             ['/php/composer_publish', '简单发布个人composer包'],
+                            ['/php/php_yield', 'PHP yield'],
                             ['/php/interview', '面试'],
                         ]
                     },

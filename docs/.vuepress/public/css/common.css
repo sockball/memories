@@ -1,7 +1,15 @@
-/* 背景、鼠标指针*/
-body {
-    background: url('../img/bg.jpg');
-    cursor: url('../img/cursor.ani'), url('../img/cursor.gif'), auto !important;
+@media (min-width: 960px) {
+    /* 背景、鼠标指针*/
+    body {
+        background: url('../img/bg.jpg');
+        cursor: url('../img/cursor.ani'), url('../img/cursor.gif'), auto !important;
+    }
+    .sidebar, .navbar .links {
+        background-color: initial !important;
+    }
+    .navbar {
+        background: rgba(222, 245, 251, 0.7) !important;
+    }
 }
 /* 删除线及删除线链接灰色 */
 strike, strike > a, s {
@@ -27,13 +35,11 @@ h2 {
 .sidebar {
     border-right: 1px solid rgba(218, 218, 218, 0.3) !important;
 }
-.navbar {
-    background: rgba(222, 245, 251, 0.7) !important;
-}
-.sidebar, .navbar .links {
-    background-color: initial !important;
-}
 p > code, li > code {
     color: #FF7BB0 !important;
     background: #4d646b !important;
+}
+.mosaic {
+    background:#000;
+    color:#000;
 }
