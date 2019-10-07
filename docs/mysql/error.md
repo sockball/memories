@@ -28,3 +28,13 @@
     * 去除非聚合列
     * 对非聚合列使用 `ANY_VALUE()` 函数 （结果并不一定是想要的
     * 关闭 `ONLY_FULL_GROUP_BY`
+
+## datetime默认值错误
+* 全名：
+    ```
+    Exception: SQLSTATE[42000]: Syntax error or access violation: 1067 Invalid default value for 'created_at'
+    ```
+* 描述：建表时对于 `datetime` 类型字段给出 `''` 、 `0` 、 `0000-00-00 00:00:00` 等值作为默认值时出现该错误
+* 方案：
+    * 默认值设置日期为非全0 如 `0000-01-01 00:00:00`
+    * 关闭 **sql_mode** 中的 `NO_ZERO_IN_DATE` 和 `NO_ZERO_DATE`

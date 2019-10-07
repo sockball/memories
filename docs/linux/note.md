@@ -61,6 +61,7 @@ rsync -avP -e 'ssh -p [port]' [user]@[ip]:[远端路径] [本地路径]
 
 ## 文件查看相关命令
 ```sh
+# 查看file所有内容
 cat file
 
 # 输出file前20行内容
@@ -70,7 +71,7 @@ head -n 20 file
 tail -n 10 file
 
 # 监听不断更新的file的变化
-tail -n file
+tail -f file
 
 # 查看文件行数
 wc -l sql.log | awk '{print $1}
@@ -96,6 +97,33 @@ sync
 echo 3 > /proc/sys/vm/drop_caches 
 ```
 * 参考：[Linux 下清理系统缓存并释放内存](https://blog.csdn.net/Gavinmiaoc/article/details/80527717)、[什么是PAGECACHE/DENTRIES/INODES?](http://ixyzero.com/blog/archives/3233.html)
+
+## crontab
+```sh
+# 占位分别为：分 时 日 月 星期
+* * * * *
+
+# 每天16:00执行一次
+0 16 * * *
+
+# 每1小时执行一次，而 * */1 * * * 实际上是每1分钟执行一次
+0 */1 * * *
+```
+
+## 类Unix系统终端快捷键
+```sh
+# 删除光标左端内容
+CTRL + U
+
+# 删除光标右端内容
+CTRL + K
+
+# 移动光标至最左端
+CTRL + A
+
+# 移动光标至最右端
+CTRL + E
+```
 
 ## other
 

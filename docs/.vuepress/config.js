@@ -27,6 +27,7 @@ module.exports = {
                         children: [
                             ['/php/', '基本'],
                             ['/php/nginx', 'nginx'],
+                            ['/php/redis', 'redis'],
                             ['php/fpm', 'fpm'],
                             ['/php/xdebug', 'xdebug'],
                             ['/php/export_to_csv', 'CSV导出'],

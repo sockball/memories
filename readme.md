@@ -15,6 +15,7 @@
     * **php**
         * [基本](http://yuzu-hime.fun/php)
         * [nginx](http://yuzu-hime.fun/php/nginx.html)
+        * [redis](http://yuzu-hime.fun/php/redis.html)
         * [fpm](http://yuzu-hime.fun/php/fpm.html)
         * [xdebug](http://yuzu-hime.fun/php/xdebug.html)
         * [CSV导出](http://yuzu-hime.fun/php/export_to_csv.html)

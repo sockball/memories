@@ -157,6 +157,52 @@ $result = file_get_contents('https://t.17track.net/restapi/track', false, $conte
     ```
 * [参考](https://blog.csdn.net/fenglailea/article/details/52717364)
 
+
+## SPL标准库（数据结构）
+
+* **栈**：先入后出
+    ```php
+    $stack = new SplStack();
+    $stack->push('first in');
+    $stack->push('second in');
+
+    // second in
+    echo $stack->pop();
+    // first in
+    echo $stack->pop();
+    ```
+
+* **队列**：先入先出
+    ```php
+    $queue = new SplQueue();
+    $queue->enqueue('first in');
+    $queue->enqueue('second in');
+
+    // first in
+    echo $queue->dequeue();
+    // second in
+    echo $queue->dequeue();
+    ```
+
+* **(最小)堆**
+    ```php
+    $heap = new SplMinHeap();
+    $heap->insert('first in'); 
+    $heap->insert('second in');
+
+    // first in
+    echo $heap->extract();
+    // second in
+    echo $heap->extract();
+
+* **固定尺寸数组**
+    ```php
+    // 固定长度为10 未使用到的索引也会分配内存空间
+    $array = new SplFixedArray(10);
+    $array[1] = 1;
+    $array[9] = 10;
+    ```
+
 ## other
 
 * 私有构造函数 防止外界实例化对象 `private function __construct() {}`

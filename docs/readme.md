@@ -8,20 +8,23 @@
 
 ### TODO LIST
 
-* ~~Find a good job!! ![](/img/sosg13_gray.png)~~ <span class='mosaic'>解决经济危机...</span>
+* **阅读**
+    * TCP/IP详解卷一
+    * Linux应该这样学（重读
+    * Linux高性能编程
+    * PHP手册...
 
-* ~~增加changelog~~
+* **语言**
+    * shell
+    * python
+    * go
 
-* ~~添加常用库内容~~
+* **后台**
+    * 分页、搜索、编辑、switch
+    * 店铺
+    * 管理员设置
 
-* 添加live2d
-
-* ~~增加读书笔记~~
-
-* 调整部分配色![](/img/sosg08.png)
-
-* 增加工具
-
-* 增加匿名评论?
-
-* 增加后台
+* **其他**
+    * 完善 [redis数据类型](/php/redis.html#数据类型)
+    * 添加live2d
+    * 增加匿名评论?

@@ -92,3 +92,4 @@ git cherry-pick [commit_hash]
 * 查看某一文件历史 `git log --pretty=oneline [filename]`
 * 使用github登录第三方网站时应特别注意授权范围scope的值 [参考](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/)
 * 使用`--orphan`选项创建分支，不会继承当前分支，工作区为空 `git checkout --orphan gh-pages`
+* 删除已加入版本控制的文件 `git rm --cache filename`

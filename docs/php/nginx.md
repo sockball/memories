@@ -21,7 +21,7 @@ server {
 
     # 选择加密套件
     ssl_ciphers AES128-SHA:AES256-SHA:RC4-SHA:DES-CBC3-SHA:RC4-MD5;
-    
+
     # 优先使用服务端加密套件
     ssl_prefer_server_ciphers on;
 
@@ -75,8 +75,8 @@ server {
 * 示例
     ```nginx
     server_name domain;
-    
-    location ^~ /api {
+
+    location ^~ /api/ {
         proxy_pass http://127.0.0.1:8070/
     }
 
@@ -85,3 +85,52 @@ server {
     # 而不是 http://127.0.0.1:8070/api/user/login
     ```
 * [参考](http://www.cnblogs.com/AloneSword/p/3673829.html)
+
+## 日志格式log_format配置示例
+```nginx
+...
+
+http {
+    ...
+
+    # format_name为该格式指定名称
+    log_format format_name
+        '$time_iso8601 【$remote_addr】\n'
+        '$request $status\n'
+        '$http_referer $http_user_agent\n';
+
+    server {
+        ...
+
+        # 最后的参数加入日志格式的指定名称
+        access_log /data/wwwlogs/access.log format_name;
+    }
+}
+```
+
+* 参考结果
+```
+2019-10-07T14:57:44+08:00 【21.126.108.125】
+GET /assets/js/9.d139dce1.js HTTP/1.1 200
+https://www.baidu.com/ Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+```
+
+* 部分变量解释
+```sh
+# 访问时间和时区 格式为 2019-10-07T14:57:44+08:00
+$time_iso8601
+
+# 访问时间和时区 格式为 07/Oct/2019:14:14:48 +0800
+$time_local
+
+# 客户端IP
+$remote_addr
+
+# 请求方式和URI
+$request
+
+# HTTP CODE
+$status
+```
+
+* [参考](https://www.cnblogs.com/joshua317/p/6651203.html)
