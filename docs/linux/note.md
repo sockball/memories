@@ -2,7 +2,10 @@
 
 同样适用于mac
 ```bash
+# 默认为nano编辑器 CTRL+X 退出
+# 或者 sudo vim /etc/sudoers
 sudo visudo
+
 # 添加以下内容
 # [username] ALL=(ALL) NOPASSWD:ALL
 ```
@@ -39,6 +42,7 @@ shift + 4    # 跳到行尾
 u            # 撤销
 ctrl + r     # 恢复撤销
 :noh         # 消除搜索内容的高亮
+5↓           # 光标下移5行
 ```
 
 ## 命令加入开机自启动
@@ -123,6 +127,28 @@ CTRL + A
 
 # 移动光标至最右端
 CTRL + E
+```
+
+## Ubuntu阿里apt源
+编辑 `/etc/apt/sources.list` 文件
+```
+deb-src http://archive.ubuntu.com/ubuntu xenial main restricted
+deb http://mirrors.aliyun.com/ubuntu/ xenial main restricted
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial main restricted multiverse universe
+deb http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted multiverse universe
+deb http://mirrors.aliyun.com/ubuntu/ xenial universe
+deb http://mirrors.aliyun.com/ubuntu/ xenial-updates universe
+deb http://mirrors.aliyun.com/ubuntu/ xenial multiverse
+deb http://mirrors.aliyun.com/ubuntu/ xenial-updates multiverse
+deb http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse
+deb http://archive.canonical.com/ubuntu xenial partner
+deb-src http://archive.canonical.com/ubuntu xenial partner
+deb http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted multiverse universe
+deb http://mirrors.aliyun.com/ubuntu/ xenial-security universe
+deb http://mirrors.aliyun.com/ubuntu/ xenial-security multiverse
 ```
 
 ## other

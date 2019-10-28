@@ -1,6 +1,13 @@
 # Change Log
 ---------------
 
+### 2019.10.20
+* 增加笔记 [php后台运行windows下cmd命令](/other/note.html#php后台运行windows下cmd命令) 、 [bat文件pause的使用](/other/note.html#windows-bat文件使用-pause)
+* 增加笔记 [git服务端钩子](/git/note.html#服务端钩子)
+* 增加 [redis数据类型](/php/redis.html#数据类型)
+* 增加 [python基础笔记](/book/weixi_python.html)
+* 增加常用库、文章等
+
 ### 2019.10.07
 * 增加笔记 [Redis](/php/redis.html)
 * 增加笔记mysql错误 [#datetime默认值错误](/mysql/error.html#datetime默认值错误)

@@ -20,6 +20,7 @@
 * [Sortable](https://github.com/SortableJS/Sortable)：拖拽排序
 * [js-cloudimage-360-view](https://github.com/scaleflex/js-cloudimage-360-view)：可以360度旋转观看图片
 * [utterances](https://github.com/utterance/utterances)：可以将 GitHub 的 issue 当作评论系统，插入第三方网页
+* [GoJS](https://github.com/NorthwoodsSoftware/GoJS)：类似echarts数据图表，GoJS还可以制作交互式流程图、关系图等，[Demo](/demo/gojs)
 
 ## Other
 
@@ -31,3 +32,4 @@
 * [wrong-pronunciation](https://github.com/shimohq/chinese-programmer-wrong-pronunciation)：中国程序员容易发音错误的单词
 * [Awesome Mac](https://github.com/jaywcjlove/awesome-mac)：收集各种类别好用的Mac应用
 * [brook](https://github.com/txthinking/brook)：全平台代理软件
+* [showdoc](https://github.com/star7th/showdoc)：随时随地部署，以Markdown为主轻松编写项目文档

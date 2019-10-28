@@ -1,4 +1,4 @@
-## 项目准备使用git的两种情况
+## 项目git初始化
 
 * 仓库已存在，本地不存在
 ```sh
@@ -30,7 +30,9 @@ git push origin HEAD --force
 
 ## 添加远程仓库
 port默认为22可不指定  
-`git remote add [alias-name] ssh://[user]@[ip]:[port]/data/git/sample.git`
+```sh
+git remote add [alias-name] ssh://[user]@[ip]:[port]/data/git/sample.git
+```
 
 ## 服务器创建git仓库
 [centos7.4开始废除 RSAAuthentication选项](https://www.cnblogs.com/Leroscox/p/9627809.html)
@@ -86,10 +88,52 @@ git cherry-pick [commit_hash]
 * `git push --tags` 推送所有本地 tag
 * `git tag -d v0.1.0` 删除某个分支
 
+## 服务端钩子
+
+* **pre-receive**  
+    处理客户端推送时首次被调用的脚本，以非0值退出时拒绝推送
+
+* **update**  
+    类似 **pre-receive**，为每个分支执行一次，以非0值退出时拒绝当前分支的更新
+
+* **post-receive**  
+    在整个过程结束后运行的脚本，用于自动部署(如自动拉取、自动打包等  
+    该脚本不会终止推送，但在结束前都与客户端保持连接状态（如npm需打包完后才与客户端断开连接  
+    要注意的是，需要保证推送时使用的用户应拥有**该脚本的执行权限**，以及**更新项目的权限**  
+    脚本示例
+    ```sh
+    #!/bin/sh
+
+    # 指定项目GIT后方可执行git相关命令
+    GIT_DIR=/data/wwwroot/app/.git
+    APP_PATH=/data/wwwroot/app/frontend
+
+    git reset --hard
+    git pull
+
+    # 注意也要保证npm的执行权限...
+    cd ${APP_PATH} && npm run build
+    ```
+
+* [官方参考](https://git-scm.com/book/zh/v2/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-Git-%E9%92%A9%E5%AD%90)
+
+## rebase
+* pull时的自动合并后使用 `git rebase` 减少一条合并commit
+* `git rebase` 解决冲突后使用 `git rebase --continue` 减少一条合并commit
+* 交互式修改历史commit `git rebase -i HEAD~3` （HEAD~3 指修改最新至后2条commit？
+* pull时即可自动rebase `git pull --rebase`  
+也可全局配置 `git config --global pull.rebase true`
+* [参考](https://baijiahao.baidu.com/s?id=1633418495146592435&wfr=spider&for=pc)
+
 ## other
 
 * 查找被忽略的文件 `git ls-files -v | grep '^h\ '`
 * 查看某一文件历史 `git log --pretty=oneline [filename]`
 * 使用github登录第三方网站时应特别注意授权范围scope的值 [参考](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/)
-* 使用`--orphan`选项创建分支，不会继承当前分支，工作区为空 `git checkout --orphan gh-pages`
+* 使用 `--orphan` 选项创建分支，不会继承当前分支，工作区为空 `git checkout --orphan gh-pages`
 * 删除已加入版本控制的文件 `git rm --cache filename`
+* 显示指定commit的变更 `git show [commit_hash]`
+* `git log --graph --pretty=oneline --abbrev-commit` (abbrev 缩写)
+* 将本次提交添加至最近一次提交（会要求重新编辑一次commit内容）`git commit --amend`
+* 直接提交所有修改的文件(不包括untracked files) `git commit -a -m 'update'`
+* 关于 no fast forward 选项 `git merge --no-ff [branch]` [参考](https://backlog.com/git-tutorial/cn/stepup/stepup1_4.html)

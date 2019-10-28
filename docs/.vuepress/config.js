@@ -18,7 +18,7 @@ module.exports = {
             ['/article/', '文章'],
             {
                 title: '笔记',
-                collapsable: false,
+                collapsable: true,
                 children: [
                     ['/linux/note', 'linux'],
                     {
@@ -69,9 +69,17 @@ module.exports = {
                 children: [
                     ['/book/high_performance_mysql', '高性能MySql'],
                     ['/book/modern_php', 'Mordern PHP'],
+                    ['/book/weixi_python', '魏曦Python基础'],
                 ]
             },
             ['/repo/', '常用库'],
+            {
+                title: 'DEMO',
+                collapsable: true,
+                children: [
+                    ['/demo/gojs', 'GoJS'],
+                ]
+            },
         ],
         lastUpdated: 'Last Updated',
     }

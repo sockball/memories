@@ -51,6 +51,7 @@
 * [IM软件专栏](https://blog.csdn.net/column/details/im-hherima.html)
 * [通讯协议与及时通讯](https://www.jianshu.com/p/ca4aeabf55f6)
 * [吞吐量（TPS）、QPS、并发数、响应时间（RT）概念](https://www.cnblogs.com/data2value/p/6220859.html)
+* [ThinkPHP 5.x 远程命令执行漏洞](https://www.vulnspy.com/cn-thinkphp-5.x-rce/)
 
 ## 工具
 

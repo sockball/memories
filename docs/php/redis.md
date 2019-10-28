@@ -66,3 +66,71 @@ aof-use-rdb-preamble no
 * [参考](https://www.cnblogs.com/itdragon/p/7906481.html)
 
 ## 数据类型
+* **string**  
+key->value 可用于快速计数
+
+* **hash**  
+一个键值对集合，Redis hash 是一个 string 类型的 field 和 value 的映射表  
+hash 特别适合用于存储对象
+```sh
+HSET user:1 id 1
+HSET user:1 name Mary
+HSET user:1 age 17
+
+HGET user:1 name
+HGETALL user:1
+```
+
+* **list**  
+一个字符串双向链表，可以作为栈也可以作为队列，可用于消息队列
+```sh
+LPUSH fans 1 2 3
+# 栈 先进后出
+LPOP fans
+# 队列 先进先出
+RPOP fans
+
+RPUSH fans 1 2 3
+# 栈 先进后出
+RPOP fans
+# 队列 先进先出
+LPOP fans
+
+# 返回索引0 - 10的成员
+LRANGE fans 0 10
+```
+
+* **set**  
+string类型的无序集合，无重复元素，可求交集、差集、合集，如共同关注列表等...
+```sh
+# 返回成功添加的数量 重复元素不计算
+SADD members 1 2 3 4 5
+# 随机取出元素
+SPOP members
+# 查看所有
+SMEMBERS members
+# 差集(只保留group_1的成员
+SDIFF group_1 group_2
+# 交集
+SINTER group_1 group_2
+# 合集
+SUNION group_1 group_2
+```
+
+* **zset**  
+类似set的有序集合，为每个成员提供score使有序，score可以重复，成员不可重复。适合排行榜
+```sh
+# 录入学生成绩
+ZADD exam 100 Jonh 100 Jane
+ZADD exam 90 Sala 95 Luna
+
+# 获取索引0 - 10的成员
+ZRANGE exam 0 10
+
+# 获取分数90 - 100的成员
+ZRANGEBYSCORE exam 90 100
+
+# 移除指定成员
+ZREM exam
+```
+* [参考](https://www.cnblogs.com/jasonZh/p/9513948.html)

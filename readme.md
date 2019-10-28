@@ -42,5 +42,6 @@
 * **读书笔记**
     * [高性能Mysql](http://yuzu-hime.fun/book/high_performance_mysql.html)
     * [Mordern PHP](http://yuzu-hime.fun/book/modern_php.html)
+    * [魏曦Python基础](http://yuzu-hime.fun/book/weixi_python.html)
 
 * [常用库](http://yuzu-hime.fun/repo/)
