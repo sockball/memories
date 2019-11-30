@@ -1,4 +1,4 @@
-## windows schtasks定时任务
+## Windows schtasks定时任务
 * 注意 **bat** 文件中命令与文件相关的部分应使用绝对路径 如： `php D:\www\app\yii task`
 
 ```sh
@@ -23,7 +23,7 @@ schtasks /delete /tn dispatch
 * `PHP_EOL` 为PHP换行常量
 * [参考](https://www.jianshu.com/p/0db1db35e025)
 
-## php后台运行windows下cmd命令
+## php后台运行Windows下cmd命令
 
 * **exec** 函数为同步，需要不等待立即返回时不能满足需求
 * 方式1 
@@ -49,10 +49,60 @@ schtasks /delete /tn dispatch
     ```
     [参考](https://www.php.net/manual/en/function.exec.php#43917)
 
-## windows bat文件使用 pause
+## Windows bat文件使用 pause
 ```
 cd D:\Work\PHPStudy\WWW\vuepress
 d:
 npm run dev
 pause
 ```
+
+## 常用编辑器(IDE)快捷键设置对照表
+
+说明                       | 偏好          | SUBLIME 3               | PHPSROTM
+:-----:                    | :-----:       | :-----:                 | :-----:
+选中下一个相同块           | CTRL+D        | Quick Add Next          | Add Selection for Next Occurrence
+跳过当前块至下一个相同块   | CTRL+K        | Quick Skip Next         | Find Next / Move to Next Occurence
+反撤销                     | CTRL+Y        | Redo Insert Characters  | Redo
+跳转指定行                 | CTRL+G        | Go to Line              | Line/Column...
+返回上次操作点             | ALT+-         | Jump Back               | Back
+返回前次操作点             | ALT++         | Jump Forward            | Forward
+无缩进的粘贴               |               | Paste                   | Paste without Formatting
+有缩进的粘贴               | CTRL+V        | Paste and Indent        | Paste
+
+## 版本通配符
+
+* **(>, >=, <, <=)1.1.2：**  
+    即必须(大于，大于等于，小于，小于等于)1.1.2版本
+
+* **~：**  
+    ~1.1.2：即 1.1.2 <= version < 1.2  
+    ~1.1：即 1.1.0 <= version < 1.2.0  
+    ~1：即 1.0.0 <= version < 2.0.0
+
+* **^：** 版本号最左边非0数字的右侧任意  
+    ^1.1.2：即 1.1.2 <= version < 2.0.0  
+    ^0.1.2：即 0.1.2 <= version < 0.2.0  
+    ^1.1：即 1.1.0 <= version < 2.0.0  
+    ^0.0：即 0.0.0 <= version < 0.1.0
+
+* **x：**  
+    1.2.x  
+    2.x  
+
+* [参考](https://www.cnblogs.com/wshiqtb/p/6395029.html)
+
+## netstat(Windows)
+```sh
+# -a 所有连接和端口
+# -n 以数字形式显示地址和端口号
+# -o 显示进程ID
+netstat -aon | findstr 10086
+```
+
+* [参考](https://blog.csdn.net/hsd2012/article/details/50759017)
+
+## Other
+
+* Windows下查看核数等信息：执行 `wmic` 命令后 `cpu get *`
+* Excel逐行累加公式举例 `SUM($B$3:B3)` $B$3即固定住B3

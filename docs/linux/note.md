@@ -2,14 +2,27 @@
 
 同样适用于mac
 ```bash
-# 默认为nano编辑器 CTRL+X 退出
+# 方式一
+# 默认为nano编辑器 ALT+X 退出
 # 或者 sudo vim /etc/sudoers
 sudo visudo
 
-# 添加以下内容
-# [username] ALL=(ALL) NOPASSWD:ALL
+# 方式二
+# 确保 /etc/sudoers 包含该内容 #includedir /etc/sudoers.d
+# 在目录 /etc/sudoers.d 下添加 不以~结尾或不包含.的 文件
+touch /etc/sudoers.d/extra
+
+# 添加内容都为
+[username] ALL=(ALL:ALL) NOPASSWD:ALL
+# 第一个 ALL 表示 FROM ALL hosts (允许登录的主机)
+# 第二个 ALL 表示 RUN as All user (可提权到的用户) 可省
+# 第三个 ALL 表示 RUN as All groups (可提权到的用户组) 可省 和user都省略时表示(root:root)
+# 第四个 ALL 表示 RUN as All commands (不需要密码的命令)
+
+# 文件中 % 开头的表示授权对应的用户组
 ```
-* [参考](https://www.cnblogs.com/zhangwuji/p/9947768.html)
+
+* [参考](https://www.cnblogs.com/jing99/p/9323080.html)
 
 ## vim常用配置
 
@@ -151,6 +164,76 @@ deb http://mirrors.aliyun.com/ubuntu/ xenial-security universe
 deb http://mirrors.aliyun.com/ubuntu/ xenial-security multiverse
 ```
 
+## grep
+```sh
+# -C 包含上下各5行
+grep -C 5 foo file 
+
+# -B 包含前5行
+grep -B 5 foo file
+
+# -A 包含后5行
+grep -A 5 foo file
+
+# -e -E 正则表达式对应行
+# -e使用基本正则表达式BREs
+# -E 使用扩展正则表达式EREs
+# @see https://www.cnblogs.com/chengmo/archive/2010/10/10/1847287.html
+grep -e '\(GET\|POST\)' note.access.log
+grep -E '(GET|POST)' note.access.log
+egrep '(GET|POST)' note.access.log
+
+# -o 正则表达式对应内容（非整行）
+grep -o '【.*】' access.log | sort | uniq -c
+grep -o '\([0-9]\+\.\)\{3\}[0-9]\+' note.access.log | sort | uniq -c
+grep -Eo '([0-9]+\.){3}[0-9]+' note.access.log | sort | uniq -c
+egrep -o '([0-9]+\.){3}[0-9]+' note.access.log | sort | uniq -c
+
+# -v 不包含http的行
+grep -v 'http' access.log
+```
+
+## 日志分析查看
+* note.access.log部分内容
+```
+2019-11-16T06:00:02+08:00 【61.157.96.12】
+GET /jiankong.htm HTTP/1.1 404
+- Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; InfoPath.3; KB974488)
+
+2019-11-16T10:44:37+08:00 【66.249.79.140】
+GET /robots.txt HTTP/1.1 404
+- Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
+
+2019-11-16T10:44:37+08:00 【66.249.79.138】
+GET /docker/note.html HTTP/1.1 200
+- Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
+
+2019-11-16T13:25:19+08:00 【125.65.40.233】
+GET / HTTP/1.1 200
+- Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; InfoPath.3; KB974488)
+
+2019-11-16T16:23:03+08:00 【125.65.40.233】
+GET /js/guest.js HTTP/1.1 404
+- Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; InfoPath.3; KB974488)
+```
+
+* 筛选出独立IP
+```sh
+awk '{ \
+if(index($2, "【")) \
+{ \
+    # $2 为 【xxx.xxx.xxx.xxx】
+    # 或 sub("【", "", $2)
+    str = substr($2, 2); \
+    sub("】", "", str); \
+    print str \
+} \
+}' \
+note.access.log | sort | uniq
+```
+
+* [参考](https://www.cnblogs.com/kongzhongqijing/articles/5239118.html)
+
 ## other
 
 * 查找含有BOM头的文件 `grep -rl $'\xEF\xBB\xBF' .`
@@ -166,3 +249,4 @@ deb http://mirrors.aliyun.com/ubuntu/ xenial-security multiverse
 * 查看CPU信息 `cat /proc/cpuinfo`
 * 查看用户登录日志 `last`
 * 清除命令历史 `history -c && rm -rf ~/.bash_history`
+* ssh登录细节 -v 选项 `ssh -v root@127.0.0.1 -p 23456`

@@ -309,7 +309,7 @@ file.tell()
 # offset可为负数 以字节为单位
 # whence 对于文本文件 只能为0 表示以文件开头为基准，默认也为0
 # 1代表从当前位置计算起，2代表以文件末尾计算起
-content.seek(2, 0)
+file.seek(2, 0)
 
 # 按行读取
 file.readline()

@@ -78,6 +78,7 @@ git cherry-pick [commit_hash]
 * `git stash list`
 * `git stash drop stash@{0}` 删除指定stash (亦可指定hash)
 * `git stash clear` 清除所有stash
+* `git pull --rebase --autostash` pull 时即可自动 rebase + stash + stash pop
 * [参考](https://www.cnblogs.com/tocy/p/git-stash-reference.html)
 
 ## tag相关命令
@@ -137,3 +138,4 @@ git cherry-pick [commit_hash]
 * 将本次提交添加至最近一次提交（会要求重新编辑一次commit内容）`git commit --amend`
 * 直接提交所有修改的文件(不包括untracked files) `git commit -a -m 'update'`
 * 关于 no fast forward 选项 `git merge --no-ff [branch]` [参考](https://backlog.com/git-tutorial/cn/stepup/stepup1_4.html)
+* `git pull --allow-unrelated-histories` 允许无相关（无相同commit）项目的拉取

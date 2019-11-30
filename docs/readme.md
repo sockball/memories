@@ -9,14 +9,14 @@
 ### TODO LIST
 
 * **阅读**
-    * TCP/IP详解卷一
-    * Linux应该这样学（重读
+    * アクセル·ワールド23
     * Linux高性能编程
+    * Linux应该这样学（重读
     * PHP手册...
 
 * **语言**
-    * shell
     * python
+    * shell
     * go
 
 * **后台**

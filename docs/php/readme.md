@@ -194,6 +194,7 @@ $result = file_get_contents('https://t.17track.net/restapi/track', false, $conte
     echo $heap->extract();
     // second in
     echo $heap->extract();
+    ```
 
 * **固定尺寸数组**
     ```php
@@ -206,3 +207,6 @@ $result = file_get_contents('https://t.17track.net/restapi/track', false, $conte
 ## other
 
 * 私有构造函数 防止外界实例化对象 `private function __construct() {}`
+* 匿名函数递归举例 `$func = function () use (&$func) { $func() }`
+* 函数 `number_format()` 通过千位分组格式化数字
+* 注意 `explode` 函数切分连续分隔符的情况（py、js为split），如以 - 切分 `a-a---a`

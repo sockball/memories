@@ -23,8 +23,8 @@
 * [try, catch, finally执行顺序](https://segmentfault.com/a/1190000015196493)
 * [php V8JS扩展](https://blog.ni-co.moe/public/558.html)
 * [Java、C++、C#、PHP、Python运算符优先级查询](https://www.sojson.com/operation.html)
-* ~~[php5.3-5.6新特性总结](https://blog.csdn.net/fenglailea/article/details/9853645)~~
-* [utf8mb4_general_ci与utf8mb4_unicode_ci](http://seanlook.com/2016/10/23/mysql-utf8mb4/)
+* <strike class='info'>[php5.3-5.6新特性总结](https://blog.csdn.net/fenglailea/article/details/9853645)</strike>
+* <strike class='info'>[utf8mb4_general_ci与utf8mb4_unicode_ci](http://seanlook.com/2016/10/23/mysql-utf8mb4/)</strike>
 * [阻塞、非阻塞、同步、异步](https://www.zhihu.com/question/19732473/answer/23434554)
 * [php yield](http://www.php20.cn/article/148)
 * [file_exists与权限问题](https://www.cnblogs.com/baochuan/archive/2012/05/06/2445822.html)
@@ -32,6 +32,8 @@
 * [多语言编码的Content-Disposition定义](https://www.jianshu.com/p/c6a5adbc8dda)
 * [如何加固linux服务器](https://acuario.xyz/how-to-secure-your-linux-server/)
 * [在PHP中使用协程实现多任务调度](http://www.laruence.com/2015/05/28/3038.html)
+* [深入剖析php://input](http://www.nowamagic.net/academy/detail/12220520)
+* [缓存穿透、缓存击穿、缓存雪崩](https://juejin.im/post/5c9a67ac6fb9a070cb24bf34)
 
 ## Web其他
 
@@ -40,7 +42,7 @@
 * [开源许可证](http://www.ruanyifeng.com/blog/2017/10/open-source-license-tutorial.html)
 * [服务器搭建git仓库](https://www.cnblogs.com/dee0912/p/5815267.html)
 * [git钩子](https://aotu.io/notes/2017/04/10/githooks/)
-* ~~[phpstorm激活](http://idea.lanyus.com/)~~
+* <strike class='info'>[phpstorm激活](http://idea.lanyus.com/)</strike>
 * [http状态码](https://www.cmsky.com/http-status-code/)
 * [Docker100问](https://blog.lab99.org/post/docker-2016-07-14-faq.html)
 * [ipv6是什么](https://zhuanlan.zhihu.com/p/36542469)
@@ -52,6 +54,8 @@
 * [通讯协议与及时通讯](https://www.jianshu.com/p/ca4aeabf55f6)
 * [吞吐量（TPS）、QPS、并发数、响应时间（RT）概念](https://www.cnblogs.com/data2value/p/6220859.html)
 * [ThinkPHP 5.x 远程命令执行漏洞](https://www.vulnspy.com/cn-thinkphp-5.x-rce/)
+* [TCP流量控制、拥塞控制](https://zhuanlan.zhihu.com/p/37379780)
+* [Google BBR](https://juejin.im/entry/5b8e5308e51d45589b26be26)
 
 ## 工具
 
@@ -69,6 +73,7 @@
 * [Youtube教育频道翻译小组](https://crashcourse.club/)
 * [服务器消息推送至微信的工具](https://sc.ftqq.com/3.version)
 * [kindle电子书分享](https://kindle.51nazhun.pub/)
+* [有什么画ER关系比较好用的软件?](https://www.zhihu.com/question/20290434)
 
 ## Funny
 
@@ -99,6 +104,6 @@
 ## 书籍
 
 * [Linux内核揭秘](https://xinqiu.gitbooks.io/linux-insides-cn/content/index.html)
-* [Linux就该这么学](https://www.linuxprobe.com/chapter-07.html)
+* [Linux就该这么学](https://www.linuxprobe.com/chapter-00.html)
 * [ECMAScript 6入门](http://es6.ruanyifeng.com/)
-* [http2讲解](https://love2.io/@ayamefing/doc/http2-explained/README.md)
+* <strike class='info'>[http2讲解](https://love2.io/@ayamefing/doc/http2-explained/README.md)</strike>

@@ -35,6 +35,7 @@ module.exports = {
                             ['/php/wx_test', '微信测试公众号接入'],
                             ['/php/composer_publish', '简单发布个人composer包'],
                             ['/php/php_yield', 'PHP yield'],
+                            ['/php/static_and_inherit', '静态修饰符static与继承'],
                             ['/php/interview', '面试'],
                         ]
                     },
@@ -61,6 +62,7 @@ module.exports = {
                 children: [
                     ['/mysql/error', 'mysql'],
                     ['/git/error', 'git'],
+                    ['/php/error', 'php'],
                 ]
             },
             {
@@ -70,6 +72,24 @@ module.exports = {
                     ['/book/high_performance_mysql', '高性能MySql'],
                     ['/book/modern_php', 'Mordern PHP'],
                     ['/book/weixi_python', '魏曦Python基础'],
+                    ['/book/weixi_python_oop', '魏曦Python面向对象开发'],
+                    {
+                        title: '廖雪峰Python教程',
+                        collapsable: true,
+                        children: [
+                            ['/book/liaoxuefeng_python_1', 'Part I'],
+                            ['/book/liaoxuefeng_python_2', 'Part II'],
+                        ],
+                    }
+                ]
+            },
+            {
+                title: '语言',
+                collapsable: true,
+                children: [
+                    ['/language/accel_world_22', 'アクセル·ワールド 22'],
+                    ['/language/Deathly_Hollows_Part_II', 'Deathly.Hollows.Part.II'],
+                    ['/language/accel_world_23', 'アクセル·ワールド 23'],
                 ]
             },
             ['/repo/', '常用库'],

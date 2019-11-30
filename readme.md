@@ -23,6 +23,7 @@
         * [微信公众号测试接入](http://yuzu-hime.fun/php/wx_test.html)
         * [简单发布个人composer包](http://yuzu-hime.fun/php/composer_publish.html)
         * [PHP yield](http://yuzu-hime.fun/php/php_yield.html)
+        * [静态修饰符static与继承](http://yuzu-hime.fun/php/static_and_inherit.html)
         * [面试](http://yuzu-hime.fun/php/interview.html)
     * **mysql**
         * [基本](http://yuzu-hime.fun/mysql)
@@ -38,10 +39,19 @@
 * **错误收集**
     * [mysql](http://yuzu-hime.fun/mysql/error.html)
     * [git](http://yuzu-hime.fun/git/error.html)
+    * [php](http://yuzu-hime.fun/php/error.html)
 
 * **读书笔记**
     * [高性能Mysql](http://yuzu-hime.fun/book/high_performance_mysql.html)
     * [Mordern PHP](http://yuzu-hime.fun/book/modern_php.html)
     * [魏曦Python基础](http://yuzu-hime.fun/book/weixi_python.html)
+    * [魏曦Python面向对象开发](http://yuzu-hime.fun/book/weixi_python_oop.html)
+    * **廖雪峰Python教程**:
+        * [Part I](http://yuzu-hime.fun/book/liaoxuefeng_python_1.html)
+        * [Part II](http://yuzu-hime.fun/book/liaoxuefeng_python_2.html)
+
+* **语言**
+    * [アクセルワールド22](http://yuzu-hime.fun/language/accel_world_22.html)
+    * [Deathly Hallows Part II](http://yuzu-hime.fun/language/Deathly_Hallows_Part_II.html)
 
 * [常用库](http://yuzu-hime.fun/repo/)

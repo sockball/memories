@@ -1,7 +1,15 @@
 # Change Log
 ---------------
 
-### 2019.10.20
+### 2019.11.30
+* 增加语言笔记 [アクセルワールド22](/language/accel_world_22.html)、[Deathly Hollows Part II](/language/Deathly_Hollows_Part_II.html)
+* 增加php笔记 [静态修饰符static与继承](/php/static_and_inherit.html)
+* 增加php错误笔记 [cURL error 60](/php/error.html#curl-error-60-ssl-certificate-problem)
+* 增加 [python面向对象笔记](/book/weixi_python_oop.html)
+* 增加 [廖雪峰Python教程笔记](/book/liaoxuefeng_python_1.html)
+* linux、git笔记、文章更新等
+
+### 2019.10.28
 * 增加笔记 [php后台运行windows下cmd命令](/other/note.html#php后台运行windows下cmd命令) 、 [bat文件pause的使用](/other/note.html#windows-bat文件使用-pause)
 * 增加笔记 [git服务端钩子](/git/note.html#服务端钩子)
 * 增加 [redis数据类型](/php/redis.html#数据类型)
@@ -9,7 +17,7 @@
 * 增加常用库、文章等
 
 ### 2019.10.07
-* 增加笔记 [Redis](/php/redis.html)
+* 增加笔记 [redis](/php/redis.html)
 * 增加笔记mysql错误 [#datetime默认值错误](/mysql/error.html#datetime默认值错误)
 * 增加笔记linux [crontab](/linux/note.html#crontab)
 * 增加笔记nginx [log_format配置](/php/nginx.html#日志格式log-format配置示例)
