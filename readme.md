@@ -46,12 +46,13 @@
     * [Mordern PHP](http://yuzu-hime.fun/book/modern_php.html)
     * [魏曦Python基础](http://yuzu-hime.fun/book/weixi_python.html)
     * [魏曦Python面向对象开发](http://yuzu-hime.fun/book/weixi_python_oop.html)
-    * **廖雪峰Python教程**:
+    * **廖雪峰Python教程**
         * [Part I](http://yuzu-hime.fun/book/liaoxuefeng_python_1.html)
         * [Part II](http://yuzu-hime.fun/book/liaoxuefeng_python_2.html)
 
 * **语言**
     * [アクセルワールド22](http://yuzu-hime.fun/language/accel_world_22.html)
     * [Deathly Hallows Part II](http://yuzu-hime.fun/language/Deathly_Hallows_Part_II.html)
+    * [アクセルワールド23](http://yuzu-hime.fun/language/accel_world_23.html)
 
 * [常用库](http://yuzu-hime.fun/repo/)

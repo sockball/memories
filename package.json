@@ -4,6 +4,7 @@
     "build": "vuepress build docs"
   },
   "dependencies": {
+    "current-device": "^0.10.0",
     "gojs": "^2.0.17",
     "vuepress": "^1.2.0"
   }

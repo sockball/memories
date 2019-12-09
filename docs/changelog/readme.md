@@ -1,5 +1,8 @@
 # Change Log
 ---------------
+### 2019.12.09
+* 增加自定义简单多功能live2d...
+* 增加语言笔记 [アクセルワールド23](/language/accel_world_23.html)
 
 ### 2019.11.30
 * 增加语言笔记 [アクセルワールド22](/language/accel_world_22.html)、[Deathly Hollows Part II](/language/Deathly_Hollows_Part_II.html)
