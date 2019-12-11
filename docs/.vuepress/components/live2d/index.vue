@@ -1,6 +1,6 @@
 <template>
-    <div class='modelList' :class='showList ? "show" : "hidden"' @click='showList = false'>
-        <ul class='contextMenu' :style='menuPosition'>
+    <div @click='showList = false'>
+        <ul class='contextMenu' :class='showList ? "show" : "hidden"' :style='menuPosition'>
             <li v-for='(name, index) in alias' :key='`_${index}`'
                 class='li'
                 @mouseenter='setBackground($event)'
@@ -40,29 +40,30 @@ const TIMEOUT = 60
 export default {
     data () {
         const model = {
-            // 部分模型崩坏...
-            // nij: 'ni-j',
-            epsilon: 'epsilon2_1',
-            gf: 'gf',
-            nico: 'nico',
-            chitose: 'chitose',
+            koharu: 'koharu',
+            haruto: 'haruto',
+            z16: 'z16',
             haru私服: 'haru01',
             haru制服: 'haru02',
-            haruto: 'haruto',
-            koharu: 'koharu',
             hibiki: 'hibiki',
             黑猫: 'hijiki',
             izumi: 'izumi',
             初音: 'miku',
-            n: 'nietzsche',
-            nipsilon: 'nipsilon',
-            nito: 'nito',
             shizuku: 'shizuku',
             白猫: 'tororo',
+            chitose: 'chitose',
+
+            // 以下模型崩坏...
             tsumiki: 'tsumiki',
+            nito: 'nito',
+            n: 'nietzsche',
             大鳥こはく: 'unitychan',
+            epsilon: 'epsilon2_1',
+            nico: 'nico',
             汪酱: 'wanko',
-            z16: 'z16',
+            // nipsilon: 'nipsilon',
+            // nij: 'ni-j',
+            // gf: 'gf',
         }
         const alias = Object.keys(model)
 
@@ -134,7 +135,6 @@ export default {
                 dev: {
                     border: false,
                 },
-                // 跨域问题...
                 dialog: {
                     enable: this.dialog,
                     hitokoto: true,
@@ -227,7 +227,6 @@ export default {
                 this.menuPosition = {
                     left: (event.clientX + 10) + 'px',
                     top: (event.clientY - menuHeight) + 'px',
-                    display: 'block',
                 }
                 this.showList = true
             })
@@ -237,11 +236,16 @@ export default {
             {
                 // 第一次随机加载一个... Math.random得到 [0, 1) 区间的数
                 // const num = Math.floor(Math.random() * this.alias.length)
-                const randomAlias = this.alias[7]
+                const randomAlias = this.alias[0]
                 this.currentModel = this.getModelSrc(randomAlias)
             }
             this.create(this.currentModel)
             this.eventInit()
+        },
+        hideContext () {
+            document.onclick = () => {
+                this.showList = false
+            }  
         },
         eventInit () {
             let time = 0
@@ -260,6 +264,7 @@ export default {
                     this.mouseWheel(canvas)
                     this.drag(canvas)
                     this.contextMenu(canvas)
+                    this.hideContext()
                 }
             }, 1000)
         }
@@ -271,14 +276,6 @@ export default {
 </script>
 
 <style scoped>
-    .modelList {
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 9999;
-    }
     .contextMenu {
         position: absolute;
         border-radius: 4px;
@@ -290,6 +287,8 @@ export default {
         background: rgba(0, 173, 181, .8);
         /* background: #00adb5; */
         box-shadow: 0 3px 12px rgba(0, 173, 181, .8);
+        padding: 0;
+        z-index: 9999;
     }
     .li {
         list-style: none;

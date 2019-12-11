@@ -54,10 +54,9 @@ import Navbar from '@theme/components/Navbar.vue'
 import Page from '@theme/components/Page.vue'
 import Sidebar from '@theme/components/Sidebar.vue'
 import { resolveSidebarItems } from '../util'
-import live2d from '../../components/live2d'
 
 export default {
-  components: { Home, Page, Sidebar, Navbar, live2d },
+  components: { Home, Page, Sidebar, Navbar },
 
   data () {
     return {
@@ -112,6 +111,11 @@ export default {
         userPageClass
       ]
     }
+  },
+
+  // 解决build时window is not defined错误 参考https://zhuanlan.zhihu.com/p/36233639
+  beforeMount () {
+    this.$options.components.live2d = () => import('../../components/live2d')
   },
 
   mounted () {
