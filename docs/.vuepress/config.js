@@ -63,6 +63,8 @@ module.exports = {
                     ['/mysql/error', 'mysql'],
                     ['/git/error', 'git'],
                     ['/php/error', 'php'],
+                    ['/linux/error', 'linux'],
+                    ['/python/error', 'python'],
                 ]
             },
             {
@@ -79,8 +81,10 @@ module.exports = {
                         children: [
                             ['/book/liaoxuefeng_python_1', 'Part I'],
                             ['/book/liaoxuefeng_python_2', 'Part II'],
+                            ['/book/liaoxuefeng_python_3', 'Part III'],
                         ],
-                    }
+                    },
+                    ['/book/php_docs', 'PHP手册'],
                 ]
             },
             {

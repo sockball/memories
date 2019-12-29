@@ -1,5 +1,12 @@
 # Change Log
 ---------------
+### 2019.12.29
+* [FreeSSL](https://freessl.cn/) 升级HTTPS
+* 增加 [廖雪峰Python教程笔记 PartIII](/book/liaoxuefeng_python_3.html)
+* 增加linux错误笔记 [Too many levels of symbolic links](/linux/error.html#too-many-levels-of-symbolic-links)
+* 增加python错误笔记 [Could not find an available JavaScript runtime](/python/error.html#could-not-find-an-available-javascript-runtime)
+* 其他update
+
 ### 2019.12.09
 * 增加自定义简单多功能live2d...
 * 增加语言笔记 [アクセルワールド23](/language/accel_world_23.html)

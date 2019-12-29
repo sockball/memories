@@ -1,3 +1,27 @@
+## 基本命令
+```sh
+docker ps (-a)
+docker start/stop/restart/rm container
+docker logs (--since='2019-12-14' -f) container
+
+# -ti 伪终端 + 开启标准输入
+docker exec -ti container bash/sh
+
+# --rm 停止后自动删除
+docker run -ti -d -p 80:80 \
+    --rm \
+    --name sample \
+    -v "$PWD":/var/wwww/html \
+    image
+
+# json形式查看容器信息
+docker inspect container
+
+docker pull image
+docker images
+docker rmi image
+```
+
 ## 安装gitlab
 
 * [中文镜像](https://hub.docker.com/r/beginor/gitlab-ce/) `docker pull beginor/gitlab-ce:11.3.0-ce.0`
@@ -17,6 +41,15 @@
         beginor/gitlab-ce:11.3.0-ce.0
     ```
 * 首次登陆设置密码及邮箱 管理员账号为root
+* 修改 hostname 的方法
+    ```sh
+    # 容器外 #13
+    vim /path/gitlab/config/gitlab.rb
+    # 容器内 #13
+    vim /etc/gitlab/gitlab.rb
+    # external_url 'http://192.168.179.132'
+    docker restart gitlab
+    ```
 * [参考](https://www.imooc.com/article/23168)
 
 ## 更改已运行的容器的端口映射

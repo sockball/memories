@@ -204,9 +204,34 @@ $result = file_get_contents('https://t.17track.net/restapi/track', false, $conte
     $array[9] = 10;
     ```
 
+## 添加跨域Header
+```php
+// header('Access-Control-Allow-Origin: https://api.xxx.com');
+header('Access-Control-Allow-Origin: *');
+
+// header('Access-Control-Allow-Methods: GET,POST,PUT');
+header('Access-Control-Allow-Methods: *');
+
+// 该header(2019.12)仍存在浏览器兼容问题 不应使用* 而应显示指定
+header('Access-Control-Allow-Headers: Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match');
+```
+
+## Xdebug基本配置
+```ini
+[Xdebug]
+; 注意为zend_extenstion而不是extenstion
+zend_extension = 'xdebug'
+xdebug.remote_enable = 1
+xdebug.remote_host = 'localhost'
+xdebug.remote_port = 9007
+xdebug.idekey = PHPSTORM
+xdebug.remote_autostart = 1
+```
+
 ## other
 
 * 私有构造函数 防止外界实例化对象 `private function __construct() {}`
 * 匿名函数递归举例 `$func = function () use (&$func) { $func() }`
 * 函数 `number_format()` 通过千位分组格式化数字
 * 注意 `explode` 函数切分连续分隔符的情况（py、js为split），如以 - 切分 `a-a---a`
+* 类注释中使用 `@mixin ClassName` 混入该类的所有方法、属性

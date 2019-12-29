@@ -56,6 +56,9 @@ u            # 撤销
 ctrl + r     # 恢复撤销
 :noh         # 消除搜索内容的高亮
 5↓           # 光标下移5行
+:120 + enter # 跳转至120行
+120gg        # 跳转至120行 
+120G         # 跳转至120行
 ```
 
 ## 命令加入开机自启动
@@ -250,3 +253,4 @@ note.access.log | sort | uniq
 * 查看用户登录日志 `last`
 * 清除命令历史 `history -c && rm -rf ~/.bash_history`
 * ssh登录细节 -v 选项 `ssh -v root@127.0.0.1 -p 23456`
+* centos8 简体中文语言包 `yum install langpacks-zh_CN.noarch` （`yum search langpacks`）

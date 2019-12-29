@@ -133,4 +133,8 @@ ZRANGEBYSCORE exam 90 100
 # 移除指定成员
 ZREM exam
 ```
-* [参考](https://www.cnblogs.com/jasonZh/p/9513948.html)
+* [Redis五种数据类型及应用场景](https://www.cnblogs.com/jasonZh/p/9513948.html)、[Redis 命令参考](http://redisdoc.com/)
+
+## Other
+
+* 通配符删除KEY `redis-cli --scan --pattern users:* | xargs redis-cli del` [参考](https://rdbtools.com/blog/redis-delete-keys-matching-pattern-using-scan/)

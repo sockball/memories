@@ -28,10 +28,12 @@ git reset --hard [commit_hash]
 git push origin HEAD --force
 ```
 
-## 添加远程仓库
-port默认为22可不指定  
+## remote
 ```sh
+# port默认为22可不指定
 git remote add [alias-name] ssh://[user]@[ip]:[port]/data/git/sample.git
+git remote remove [alias-name]
+git remote set-url [alias-name] ssh://...
 ```
 
 ## 服务器创建git仓库

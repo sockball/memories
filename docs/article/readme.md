@@ -10,11 +10,14 @@
 * [渐变色示例](https://uigradients.com/)
 * [概念性页面加载动画](https://medium.com/@ann.green/loading-indicators-e9d9ac9680b)
 * [Web前端开发评测系统](http://scriptoj.mangojuice.top/)
-* [css特效](https://cssfx.dev)
+* [CSS特效](https://cssfx.dev)
+* [JS事件委托](https://zhuanlan.zhihu.com/p/26536815)
 
 ## Web后端
 
 * [深入理解Yii2.0](http://www.digpage.com/index.html)
+* [Yii2事件例子](https://segmentfault.com/a/1190000009509284)
+* [Yii常见误区 - 输出注册资源](http://www.kkh86.com/it/yii2-adv/guide-mistake-output-assets.html)
 * [Yii 2.0.14类参考中文文档](http://www.zhangmoxuan.com/api/index.html)
 * [Yii console控制台](https://segmentfault.com/a/1190000013364677)
 * [Elasticsearch教程](https://www.sojson.com/blog/81.html)
@@ -34,6 +37,7 @@
 * [在PHP中使用协程实现多任务调度](http://www.laruence.com/2015/05/28/3038.html)
 * [深入剖析php://input](http://www.nowamagic.net/academy/detail/12220520)
 * [缓存穿透、缓存击穿、缓存雪崩](https://juejin.im/post/5c9a67ac6fb9a070cb24bf34)
+* [Linux的&与nohup](https://segmentfault.com/a/1190000009509284)
 
 ## Web其他
 
@@ -56,6 +60,7 @@
 * [ThinkPHP 5.x 远程命令执行漏洞](https://www.vulnspy.com/cn-thinkphp-5.x-rce/)
 * [TCP流量控制、拥塞控制](https://zhuanlan.zhihu.com/p/37379780)
 * [Google BBR](https://juejin.im/entry/5b8e5308e51d45589b26be26)
+* [你知道Content-Disposition吗](https://juejin.im/post/5d521575f265da03ee6a4bda)
 
 ## 工具
 
@@ -100,6 +105,8 @@
 * [隔着玻璃晒太阳无用](https://www.nytimes.com/2019/02/08/well/live/does-sunlight-through-glass-provide-vitamin-d.html)
 * [PI API](https://pi.delivery//#apipi_get)
 * [.new域名](https://www.theverge.com/2018/10/25/18024918/google-new-shortcut-g-suite-apps-docs-sheets)  （[参考](http://www.ruanyifeng.com/blog/2018/11/weekly-issue-31.html)新闻第五小节）
+* [AI生成渐变色](https://www.designwithai.com/aigradient)
+* [日本铁路通APP](https://github.com/ruanyf/weekly/issues/933)
 
 ## 书籍
 

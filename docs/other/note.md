@@ -1,5 +1,5 @@
 ## Windows schtasks定时任务
-* 注意 **bat** 文件中命令与文件相关的部分应使用绝对路径 如： `php D:\www\app\yii task`
+* ⚠️ 注意 **bat** 文件中命令与文件相关的部分应使用绝对路径 如： `D:\path\php D:\www\app\yii task`
 
 ```sh
 # 创建 名为 dispatch 每日17:30:00执行 某路径下的dispatch.bat文件 的定时任务
@@ -28,7 +28,7 @@ schtasks /delete /tn dispatch
 * **exec** 函数为同步，需要不等待立即返回时不能满足需求
 * 方式1 
     ```php
-    $cmd = 'php D:\WWW\app\task.php'
+    $cmd = 'D:\path\php D:\WWW\app\task.php'
 
     pclose(popen("start /B {$cmd}", 'r'));
     ```
@@ -42,7 +42,7 @@ schtasks /delete /tn dispatch
     ```
 
     ```php
-    $cmd = 'php D:\WWW\app\task.php'
+    $cmd = 'D:\path\php D:\WWW\app\task.php'
 
     $WshShell = new COM('WScript.Shell');
     $WshShell->Run("cmd /C {$cmd}", 0, false);
@@ -69,6 +69,7 @@ pause
 返回前次操作点             | ALT++         | Jump Forward            | Forward
 无缩进的粘贴               |               | Paste                   | Paste without Formatting
 有缩进的粘贴               | CTRL+V        | Paste and Indent        | Paste
+...                        | CTRL+Enter    |        | 
 
 ## 版本通配符
 
