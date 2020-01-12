@@ -81,6 +81,9 @@ rsync -avP -e 'ssh -p [port]' [user]@[ip]:[远端路径] [本地路径]
 
 ## 文件查看相关命令
 ```sh
+# -r倒序 -t按修改时间排序
+ls -rt
+
 # 查看file所有内容
 cat file
 

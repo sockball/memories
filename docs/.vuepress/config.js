@@ -82,6 +82,8 @@ module.exports = {
                             ['/book/liaoxuefeng_python_1', 'Part I'],
                             ['/book/liaoxuefeng_python_2', 'Part II'],
                             ['/book/liaoxuefeng_python_3', 'Part III'],
+                            ['/book/liaoxuefeng_python_4', 'Part IV'],
+                            ['/book/liaoxuefeng_python_5', 'Part V'],
                         ],
                     },
                     ['/book/php_docs', 'PHP手册'],

@@ -52,6 +52,8 @@
         * [Part I](https://yuzu-hime.fun/book/liaoxuefeng_python_1.html)
         * [Part II](https://yuzu-hime.fun/book/liaoxuefeng_python_2.html)
         * [Part III](https://yuzu-hime.fun/book/liaoxuefeng_python_3.html)
+        * [Part IV](https://yuzu-hime.fun/book/liaoxuefeng_python_4.html)
+        * [Part V](https://yuzu-hime.fun/book/liaoxuefeng_python_5.html)
 
 * **语言**
     * [アクセルワールド22](https://yuzu-hime.fun/language/accel_world_22.html)

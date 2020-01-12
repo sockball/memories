@@ -103,6 +103,40 @@ WHERE
         E.Salary = tmp.Salary
     ```
 
+## 关于自增主键
+* 在**5.7**及之前 MyISAM与InnoDB对于自增主键有一定的差异 表现在：  
+当最大主键变更时 MyISAM会重新确定当前AUTO_INCREMENT值，而InnoDB不变  
+```sql
+-- 举例说明
+-- 假设此次INSERT后主键id为10
+INSERT INTO user (name) VALUE ('Jane');
+UPDATE user SET id=100 WHERE id=10;
+
+-- 再次INSERT时 MyISAM本次的id为101 而InnoDB为11
+INSERT INTO user (name) VALUE ('Tom');
+```
+* 8.0后 InnoDB行为已与MyISAM一致
+* 使用docker测试
+```sh
+# docker pull mysql:8
+# docker run --name mysql8.0 -e MYSQL_ROOT_PASSWORD=123456 -d mysql:8.0
+# docker exec -ti mysql8.0 mysql -uroot -p
+docker pull mysql:5.7
+docker run --name mysql5.7 -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.7
+docker exec -ti mysql5.7 mysql -uroot -p
+
+CREATE DATABASE test;
+USE test;
+CREATE TABLE user (id INT(11) PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20)) ENGINE=InnoDB;
+# id 1 2 3
+INSERT INTO user (name) VALUES ('mary'), ('jane'), ('tom');
+UPDATE user SET id = 10000 WHERE id = 3;
+
+# 5.7 id 4 5 6
+# 8.0 id 10001 10002 10003
+INSERT INTO user (name) VALUES ('mary'), ('jane'), ('tom');
+SELECT * FROM user;
+```
 
 ## other
 

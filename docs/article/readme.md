@@ -37,7 +37,7 @@
 * [在PHP中使用协程实现多任务调度](http://www.laruence.com/2015/05/28/3038.html)
 * [深入剖析php://input](http://www.nowamagic.net/academy/detail/12220520)
 * [缓存穿透、缓存击穿、缓存雪崩](https://juejin.im/post/5c9a67ac6fb9a070cb24bf34)
-* [Linux的&与nohup](https://segmentfault.com/a/1190000009509284)
+* [Linux的&与nohup](https://www.cnblogs.com/zzyoucan/p/7764590.html)
 
 ## Web其他
 
@@ -107,6 +107,7 @@
 * [.new域名](https://www.theverge.com/2018/10/25/18024918/google-new-shortcut-g-suite-apps-docs-sheets)  （[参考](http://www.ruanyifeng.com/blog/2018/11/weekly-issue-31.html)新闻第五小节）
 * [AI生成渐变色](https://www.designwithai.com/aigradient)
 * [日本铁路通APP](https://github.com/ruanyf/weekly/issues/933)
+* [各式各样的验证码](https://coolshell.cn/articles/7917.html)
 
 ## 书籍
 
@@ -114,3 +115,4 @@
 * [Linux就该这么学](https://www.linuxprobe.com/chapter-00.html)
 * [ECMAScript 6入门](http://es6.ruanyifeng.com/)
 * <strike class='info'>[http2讲解](https://love2.io/@ayamefing/doc/http2-explained/README.md)</strike>
+* [TCP/IP详解卷1](http://www.52im.net/topic-tcpipvol1.html?mobile=no)

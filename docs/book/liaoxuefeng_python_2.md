@@ -2,7 +2,7 @@
 
 * **map**
 ```py
-# 参数一为函数名, 参数2为Interable, 将函数应用于其每个元素 返回Iterator
+# 参数一为函数名, 参数2为Iterable, 将函数应用于其每个元素 返回Iterator
 g = map(int, '123')
 
 # list函数可以获得所有结果

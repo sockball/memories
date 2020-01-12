@@ -107,3 +107,4 @@ netstat -aon | findstr 10086
 
 * Windows下查看核数等信息：执行 `wmic` 命令后 `cpu get *`
 * Excel逐行累加公式举例 `SUM($B$3:B3)` $B$3即固定住B3
+* CMD编码格式转为UTF-8 `CHCP 65001` 然后字体改为 **Lucida Console**

@@ -1,5 +1,11 @@
 # Change Log
 ---------------
+### 2020.01.12
+* 增加 [廖雪峰Python教程笔记 PartIV](/book/liaoxuefeng_python_4.html)
+* 增加 [廖雪峰Python教程笔记 PartV](/book/liaoxuefeng_python_5.html)
+* 增加笔记 [MySQL自增主键差异](/mysql/#关于自增主键)
+* 其他update
+
 ### 2019.12.29
 * [FreeSSL](https://freessl.cn/) 升级HTTPS
 * 增加 [廖雪峰Python教程笔记 PartIII](/book/liaoxuefeng_python_3.html)

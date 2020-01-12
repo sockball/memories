@@ -17,7 +17,7 @@
     * HTTP权威指南
 
 * **语言**
-    * python
+    * ~~python~~
     * shell
     * go
 
