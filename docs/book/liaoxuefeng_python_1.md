@@ -6,8 +6,10 @@ b = set([2, 'b'])
 c = { 122, 233 }
 # 合集
 a | b
-# 差集
+# 交集
 a & b
+# 差集
+a - b
 ```
 
 * 不可变对象 **str tuple True False None**  

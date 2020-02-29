@@ -100,6 +100,14 @@ module.exports = {
             },
             ['/repo/', '常用库'],
             {
+                title: 'Leetcode',
+                collapsable: true,
+                children: [
+                    ['/leetcode/self', 'self'],
+                    ['/leetcode/best', 'best'],
+                ],
+            },
+            {
                 title: 'DEMO',
                 collapsable: true,
                 children: [

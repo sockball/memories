@@ -12,6 +12,7 @@
 * [Web前端开发评测系统](http://scriptoj.mangojuice.top/)
 * [CSS特效](https://cssfx.dev)
 * [JS事件委托](https://zhuanlan.zhihu.com/p/26536815)
+* [vue权限路由实现方式总结](https://juejin.im/post/5b5bfd5b6fb9a04fdd7d687a#heading-12)
 
 ## Web后端
 
@@ -27,7 +28,7 @@
 * [php V8JS扩展](https://blog.ni-co.moe/public/558.html)
 * [Java、C++、C#、PHP、Python运算符优先级查询](https://www.sojson.com/operation.html)
 * <strike class='info'>[php5.3-5.6新特性总结](https://blog.csdn.net/fenglailea/article/details/9853645)</strike>
-* <strike class='info'>[utf8mb4_general_ci与utf8mb4_unicode_ci](http://seanlook.com/2016/10/23/mysql-utf8mb4/)</strike>
+* [utf8mb4_general_ci与utf8mb4_unicode_ci](https://mp.weixin.qq.com/s?__biz=MzAwMDU2ODU3MA==&mid=2247484084&idx=1&sn=e3740e1087dc73ffcdc4b56bfeaaaa6d&chksm=9ae7bf21ad9036370e8174995ff73775a0ff8c8a51b9995fc8675a994a768a136d187e2aa76d#rd)
 * [阻塞、非阻塞、同步、异步](https://www.zhihu.com/question/19732473/answer/23434554)
 * [php yield](http://www.php20.cn/article/148)
 * [file_exists与权限问题](https://www.cnblogs.com/baochuan/archive/2012/05/06/2445822.html)
@@ -38,6 +39,10 @@
 * [深入剖析php://input](http://www.nowamagic.net/academy/detail/12220520)
 * [缓存穿透、缓存击穿、缓存雪崩](https://juejin.im/post/5c9a67ac6fb9a070cb24bf34)
 * [Linux的&与nohup](https://www.cnblogs.com/zzyoucan/p/7764590.html)
+* [PHP中JWT的简单实现](https://juejin.im/post/5c358f116fb9a049eb3c1dd5)
+* [MySQL中CHAR与VARCHAR](https://learn.blog.csdn.net/article/details/103341778)
+* [Python中异步协程的使用方法介绍](https://cuiqingcai.com/6160.html)
+* [python中使用tor代理](https://nladuo.github.io/2016/07/17/python%E4%B8%AD%E4%BD%BF%E7%94%A8tor%E4%BB%A3%E7%90%86/)
 
 ## Web其他
 
@@ -61,6 +66,8 @@
 * [TCP流量控制、拥塞控制](https://zhuanlan.zhihu.com/p/37379780)
 * [Google BBR](https://juejin.im/entry/5b8e5308e51d45589b26be26)
 * [你知道Content-Disposition吗](https://juejin.im/post/5d521575f265da03ee6a4bda)
+* [浮点数的二进制表示](http://www.ruanyifeng.com/blog/2010/06/ieee_floating-point_representation.html)
+* [负数的二进制表示方法](http://blog.sina.com.cn/s/blog_56d8ea900100y65b.html)
 
 ## 工具
 
@@ -108,6 +115,7 @@
 * [AI生成渐变色](https://www.designwithai.com/aigradient)
 * [日本铁路通APP](https://github.com/ruanyf/weekly/issues/933)
 * [各式各样的验证码](https://coolshell.cn/articles/7917.html)
+* [浏览器体验Linux系统](https://distrotest.net)
 
 ## 书籍
 

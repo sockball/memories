@@ -274,8 +274,7 @@ db.close()
 * mysql
 ```py
 # 安装mysql驱动
-# pip install mysql-connector-python --allow-external mysql-connector-python
-# 或 pip install mysql-connector
+# pip install mysql-connector
 
 import mysql.connector
 

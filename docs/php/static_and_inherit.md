@@ -79,5 +79,6 @@ echo B::getD();
 
 ```
 Static properties defined ONLY in the parent class will share a COMMON value.
+仅在父类定义的静态属性(子类)才享有共同的值
 ```
 [参考](https://www.php.net/manual/zh/language.oop5.static.php#123105)

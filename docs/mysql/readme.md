@@ -155,8 +155,16 @@ SELECT * FROM user;
 
 * `IFNULL()` 函数 `SELECT IFNULL([表达式或查询], [其他值/表达式]) AS result`
 
-* `DATEDIFF()`函数 比较2个DATE类型的值, 结果为前一个日期减去后一个日期的天数
+* `DATEDIFF()` 函数：比较2个DATE类型的值, 结果为前一个日期减去后一个日期的天数
     ```sql
-    # 值为-1
+    -- -1
     SELECT DATEDIFF('2018-08-07', '2018-08-08')
     ```
+* `DATE_SUB()` 函数：根据给定 日期/时间 格式计算
+    ```sql
+    -- 2020-02-08
+    SELECT DATE_SUB('2020-02-10', INTERVAL 2 DAY)
+    ```
+* 关于排序规则COLLATE中 `general_ci` 与 `unicode_ci` 其中一点区别为：  
+`unicode_ci` 不区分字母大小写、中文全角/半角、日语平假名/片假  
+`general_ci` 仅不区分字母大小写（CASE INSENCETIVE）

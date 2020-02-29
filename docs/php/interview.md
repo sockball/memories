@@ -29,11 +29,11 @@
     print_r($arr)
     ```
 
-* 变量类型(8种)
+* 变量类型(9种)
     ```
     int(整型) float(浮点型) string(字符串) boolean(布尔型)
 
-    array(数组) object(对象)
+    array(数组) object(对象) callable
 
     null(空) resource(资源型)
     ```
@@ -49,7 +49,7 @@
     ```php
     __CLASS__ __METHOD__ __FUNCTION__
     __DIR__ __FILE__
-    __NAMESPACE__ __STATIC__ __TRAIT__ __LINE__
+    __NAMESPACE__ __TRAIT__ __LINE__
     ```
 
 * 魔术方法

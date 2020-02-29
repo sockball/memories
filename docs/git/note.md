@@ -91,6 +91,11 @@ git cherry-pick [commit_hash]
 * `git push --tags` 推送所有本地 tag
 * `git tag -d v0.1.0` 删除某个分支
 
+## checkout相关命令
+
+* `git checkout [-b] new_branch` 切换(并创建) 分支
+* `git checkout [commit] filename` 恢复指定文件到指定版本 默认为HEAD
+
 ## 服务端钩子
 
 * **pre-receive**  

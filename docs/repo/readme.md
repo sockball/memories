@@ -6,6 +6,7 @@
 * [chinese-xinhua](https://github.com/pwxcoo/chinese-xinhua)：中华新华字典数据库
 * [PhpSpreadsheet](https://github.com/PHPOffice/PhpSpreadsheet)：php读写Excel
 * [micofostarchive/redis](https://github.com/microsoftarchive/redis)：windows版redis
+* [PHP JWT](https://github.com/lcobucci/jwt)：PHP版JWT
 
 ## Web前端
 
@@ -21,6 +22,7 @@
 * [js-cloudimage-360-view](https://github.com/scaleflex/js-cloudimage-360-view)：可以360度旋转观看图片
 * [utterances](https://github.com/utterance/utterances)：可以将 GitHub 的 issue 当作评论系统，插入第三方网页
 * [GoJS](https://github.com/NorthwoodsSoftware/GoJS)：类似echarts数据图表，GoJS还可以制作交互式流程图、关系图等，[Demo](/demo/gojs)
+* [vue-native-websocket](https://github.com/nathantsoi/vue-native-websocket)：[使用示例分析](https://qtdebug.com/html/java-vue-adventure/Web%20Socket.html)
 
 ## Other
 

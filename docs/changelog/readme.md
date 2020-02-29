@@ -1,5 +1,10 @@
 # Change Log
 ---------------
+### 2020.02.29
+* Pixiv Weekly v1.2.2 发布~：[download...](https://media.yuzu-hime.fun/pixiv_weekly.v1.2.2.apk)
+* 开始Leetcode之旅~
+* 其他update
+
 ### 2020.01.12
 * 增加 [廖雪峰Python教程笔记 PartIV](/book/liaoxuefeng_python_4.html)
 * 增加 [廖雪峰Python教程笔记 PartV](/book/liaoxuefeng_python_5.html)

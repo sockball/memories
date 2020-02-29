@@ -139,6 +139,40 @@ arr.splice(1, 1, 200)
 arr.splice(1, 1, 400, 500)
 ```
 
+## BLOB下载
+```js
+function download ({ data, headers })
+{
+    const disposition = headers['content-disposition']
+    let filename
+    if (disposition.includes('filename*='))
+    {
+        // 多语言编码格式：filename*=utf-8''%E5%95%8A%E5%95%8A%E5%95%8A.csv
+        filename = decodeURI(disposition.split("filename*=utf-8''")[1])
+    }
+    else
+    {
+        // 格式：filename="sample.csv"
+        filename = disposition.split('filename=')[1].slice(1, -1)
+    }
+
+    const arr = filename.split('.')
+    const exetension = arr[arr.length - 1]
+    const blob = new Blob([data], { type: mimeTypes[exetension] })
+    const href = window.URL.createObjectURL(blob)
+
+    const a = document.createElement('a')
+    a.href = href
+    a.download = filename
+    document.body.appendChild(a)
+    a.click()
+    document.body.removeChild(a)
+    // 释放blob对象
+    window.URL.revokeObjectURL(href)
+}
+```
+* [参考](http://www.cnblogs.com/xuejiangjun/p/8310045.html)
+
 ## other
 
 * 控制台执行 `document.body.contentEditable='true'` 可直接编辑页面
