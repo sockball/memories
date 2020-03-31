@@ -206,15 +206,19 @@ $result = file_get_contents('https://t.17track.net/restapi/track', false, $conte
 
 ## 添加跨域Header
 ```php
-// header('Access-Control-Allow-Origin: https://api.xxx.com');
-header('Access-Control-Allow-Origin: *');
+// 协议、域名、端口必须都相同
+header('Access-Control-Allow-Origin: https://api.xxx.com');
 
 // header('Access-Control-Allow-Methods: GET,POST,PUT');
 header('Access-Control-Allow-Methods: *');
 
 // 该header(2019.12)仍存在浏览器兼容问题 不应使用* 而应显示指定
 header('Access-Control-Allow-Headers: Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match');
+
+// 缓存本次OPTIONS预检请求的有效期
+header('Access-Control-Max-Age: 86400');
 ```
+[参考](https://www.ruanyifeng.com/blog/2016/04/cors.html)
 
 ## Xdebug基本配置
 ```ini

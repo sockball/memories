@@ -136,7 +136,7 @@ export default {
 }
 </script>
 
-<style scopped>
+<style scoped>
     #gojs-demo {
         background-color: white;
         border: solid 1px black;

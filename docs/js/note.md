@@ -173,9 +173,79 @@ function download ({ data, headers })
 ```
 * [参考](http://www.cnblogs.com/xuejiangjun/p/8310045.html)
 
+## 非遮罩判断点击指定区域外的方法
+```js
+document.onclick = e => {
+    const inner = document.querySelector('#inner')
+    // visible代表指定区域当前的显隐情况 再次点击图标时也取消点击事件
+    if (!visible || (inner !== e.target && !inner.contains(e.target)))
+    {
+        visible = false
+        document.onclick = null
+    }
+}
+```
+
+## 自定义小窗口判断滚到底部
+```js
+// 包括不可见元素的整个高度
+const scrollHeight = e.target.scrollHeight
+// 滚动条滚动距离
+const scrollTop = e.target.scrollTop
+// 窗口可视范围高度
+const clientHeight = e.target.clientHeight
+
+console.log(scrollHeight, scrollTop, clientHeight)
+if (clientHeight + scrollTop >= scrollHeight)
+{
+    console.log('Load More')
+}
+```
+
+## 防抖与节流
+```js
+<button onclick='debounce()'>防抖</button>
+<button onclick='throttle()'>节流</button>
+<script type="text/javascript">
+    let timer = null
+    const timeout = 500
+
+    function debounce ()
+    {
+        console.log('click')
+        if (timer !== null)
+        {
+            clearTimeout(timer)
+        }
+        timer = setTimeout(() => {
+            console.log('foo')
+            // foo()
+            timer = null
+        }, timeout)
+    }
+
+    function throttle ()
+    {
+        console.log('click')
+        if (timer === null)
+        {
+            timer = setTimeout(() => {
+                console.log('foo')
+                // foo()
+                timer = null
+            }, timeout)
+        }
+    }
+</script>
+```
+
+## 利用calc等宽分配
+[Demo](/demo/constant_width)
+
 ## other
 
 * 控制台执行 `document.body.contentEditable='true'` 可直接编辑页面
 * 无限循环简写 `for (;;) {...}`
 * 拥有id的元素会创建全局变量，id即为变量名，控制台可直接使用
 * `+new Date()` 可以快速得到毫秒级时间戳
+* 格式化手机号 `'18312345678'.replace(/^(\d{3})(\d{4})(\d{4})$/, '$1 $2 $3')`

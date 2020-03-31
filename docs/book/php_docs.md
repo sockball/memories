@@ -329,3 +329,6 @@ var_dump($instance);
 var_dump($reference);
 var_dump($assigned);
 ```
+
+* [内存泄漏示例](https://www.php.net/manual/zh/language.oop5.decon.php#105368)
+

@@ -43,6 +43,7 @@
 * [MySQL中CHAR与VARCHAR](https://learn.blog.csdn.net/article/details/103341778)
 * [Python中异步协程的使用方法介绍](https://cuiqingcai.com/6160.html)
 * [python中使用tor代理](https://nladuo.github.io/2016/07/17/python%E4%B8%AD%E4%BD%BF%E7%94%A8tor%E4%BB%A3%E7%90%86/)
+* [golangbot](https://www.yuque.com/ksco/golangbot-cn/rktgg7)
 
 ## Web其他
 
@@ -68,6 +69,9 @@
 * [你知道Content-Disposition吗](https://juejin.im/post/5d521575f265da03ee6a4bda)
 * [浮点数的二进制表示](http://www.ruanyifeng.com/blog/2010/06/ieee_floating-point_representation.html)
 * [负数的二进制表示方法](http://blog.sina.com.cn/s/blog_56d8ea900100y65b.html)
+* [为什么负数的取余计算各个编程语言结果不统一？](https://www.zhihu.com/question/34116024)
+* [短网址(short URL)系统的原理及其实现](https://hufangyun.com/2017/short-url/)
+* [约定式提交](https://www.conventionalcommits.org/)
 
 ## 工具
 
@@ -86,6 +90,9 @@
 * [服务器消息推送至微信的工具](https://sc.ftqq.com/3.version)
 * [kindle电子书分享](https://kindle.51nazhun.pub/)
 * [有什么画ER关系比较好用的软件?](https://www.zhihu.com/question/20290434)
+* [Raccoon(从Google Play将安卓apk下载到桌面)](https://raccoon.onyxbits.de)
+* [doka在线图片编辑器](https://doka.photo/)
+* [可视化crontab编辑器](https://crontab.guru/)
 
 ## Funny
 
@@ -116,6 +123,17 @@
 * [日本铁路通APP](https://github.com/ruanyf/weekly/issues/933)
 * [各式各样的验证码](https://coolshell.cn/articles/7917.html)
 * [浏览器体验Linux系统](https://distrotest.net)
+* [中国贫穷地区的发展](https://finance.sina.cn/china/gncj/2019-05-31/detail-ihvhiqay2662671.d.html)
+* [各种语言的0.3(0.30000000000000004.com)](https://0.30000000000000004.com/)
+* [招聘启事都要求35岁以下的，那35岁以后油腻中年人该去哪？](https://mp.weixin.qq.com/s/AXmXQye9_puIFVn_okTEPw)
+* [隐藏字符加密（写给女孩的隐秘情书）](https://zhuanlan.zhihu.com/p/75992161)
+* [远程面试神器...](https://www.showmebug.com/)
+* [评价各种网站删除账号的难易度](https://justdeleteme.xyz/)
+* [在线的代码运行试验环境](https://code.labstack.com/program)
+* [开源的天文软件3D天空](https://stellarium.org/)
+* [技术面试最后反问面试官的话](https://github.com/yifeikong/reverse-interview-zh)
+* [how-bash-completion-works](https://tuzz.tech/blog/how-bash-completion-works)
+* [浏览器地址栏贪吃蛇](https://demian.ferrei.ro/snake)
 
 ## 书籍
 

@@ -112,6 +112,7 @@ module.exports = {
                 collapsable: true,
                 children: [
                     ['/demo/gojs', 'GoJS'],
+                    ['/demo/constant_width', 'calc等宽分配'],
                 ]
             },
         ],
