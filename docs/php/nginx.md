@@ -134,3 +134,18 @@ $status
 ```
 
 * [参考](https://www.cnblogs.com/joshua317/p/6651203.html)
+
+## 返回客户端ip
+```nginx
+location /ip {
+    default_type text/plain;
+    return 200 $remote_addr;
+}
+
+location /json_ip {
+    default_type application/json;
+    return 200 "{\"ip\":\"$remote_addr\"}";
+}
+```
+
+* [参考](https://www.ecalamia.com/blog/show-ip-api-nginx/)

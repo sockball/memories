@@ -103,6 +103,65 @@ netstat -aon | findstr 10086
 
 * [参考](https://blog.csdn.net/hsd2012/article/details/50759017)
 
+## frp配置参考
+* Windows远程
+```ini
+; frps.ini
+[common]
+bind_port = 7000
+
+; frpc.ini
+[common]
+server_addr = x.x.x.x
+server_port = 7000      ; 服务端与客户端通信端口
+
+[rdp]
+type = tcp
+local_ip = 127.0.0.1
+local_port = 3389       ; windows RDP默认端口
+remote_port = 34567     ; 服务端frp入口
+```
+
+## python利用谷歌API获取Youtube视频分类示例
+```py
+import requests, json
+
+base_url = 'https://www.googleapis.com/youtube/v3/videoCategories?part=snippet&id=__id__&key=__key__&hl=zh_CN'
+api_key = 'AIzaSyAZ4KgnMIanCljaaStwJvrIY1Eo9fqjolM'
+auth_token = '....'
+
+base_url = base_url.replace('__key__', api_key)
+headers = { 'Authorization': 'Bearer ' + auth_token, 'Accept': 'application/json' }
+
+# id最大值大约在40多
+for id in range(1, 50):
+    url = base_url.replace('__id__', str(id))
+
+    raw = requests.get(url, headers = headers)
+    res = json.loads(raw.content)
+    if len(res['items']) > 0 and res['items'][0]['snippet']['assignable'] is True:
+        print('id：%s \t name：%s\n' % (id, res['items'][0]['snippet']['title']))
+
+print('end')
+
+'''
+返回值示例
+{
+    'kind': 'youtube#videoCategoryListResponse',
+    'etag': '"nxOHAKTVB7baOKsQgTtJIyGxcs8/5PBdFIM28opCSkfiF11JAXuEneI"',
+    'items': [
+        {
+            'kind': 'youtube#videoCategory',
+            'etag': '"nxOHAKTVB7baOKsQgTtJIyGxcs8/Xy1mB4_yLrHy_BmKmPBggty2mZQ"',
+            'id': '1',
+            'snippet': { 'channelId': 'UCBR8-60-B28hp2BmDPdntcQ', 'title': 'Film & Animation', 'assignable': True }
+        }
+    ]
+}
+'''
+```
+* [https://developers.google.com/youtube/v3/docs/videoCategories/list](https://developers.google.com/youtube/v3/docs/videoCategories/list)
+
 ## Other
 
 * Windows下查看核数等信息：执行 `wmic` 命令后 `cpu get *`

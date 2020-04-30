@@ -35,3 +35,4 @@
 * [Awesome Mac](https://github.com/jaywcjlove/awesome-mac)：收集各种类别好用的Mac应用
 * [brook](https://github.com/txthinking/brook)：全平台代理软件
 * [showdoc](https://github.com/star7th/showdoc)：随时随地部署，以Markdown为主轻松编写项目文档
+* [frp](https://github.com/fatedier/frp)：fast reverse proxy

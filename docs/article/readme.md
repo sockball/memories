@@ -72,6 +72,8 @@
 * [为什么负数的取余计算各个编程语言结果不统一？](https://www.zhihu.com/question/34116024)
 * [短网址(short URL)系统的原理及其实现](https://hufangyun.com/2017/short-url/)
 * [约定式提交](https://www.conventionalcommits.org/)
+* [数据库类型历史回顾](https://www.prisma.io/blog/comparison-of-database-models-1iz9u29nwn37)
+* [软件架构编年史](https://www.jianshu.com/p/b477b2cc6cfa)
 
 ## 工具
 
@@ -93,6 +95,10 @@
 * [Raccoon(从Google Play将安卓apk下载到桌面)](https://raccoon.onyxbits.de)
 * [doka在线图片编辑器](https://doka.photo/)
 * [可视化crontab编辑器](https://crontab.guru/)
+* [WinMTR](https://github.com/oott123/WinMTR)
+* [Searx 私人搜索引擎](https://www.moerats.com/archives/875)
+* [彩云小译(双语)](https://github.com/ruanyf/weekly/issues/910)
+* [匿名分享文件](https://onionshare.org)
 
 ## Funny
 
@@ -134,6 +140,9 @@
 * [技术面试最后反问面试官的话](https://github.com/yifeikong/reverse-interview-zh)
 * [how-bash-completion-works](https://tuzz.tech/blog/how-bash-completion-works)
 * [浏览器地址栏贪吃蛇](https://demian.ferrei.ro/snake)
+* [CSS Animation Libraries](https://css-tricks.com/css-animation-libraries)
+* [各大语言JSON解析器最大嵌套层数](https://github.com/lovasoa/bad_json_parsers)
+* [滚动条的变化历史](https://scrollbars.matoseb.com)
 
 ## 书籍
 

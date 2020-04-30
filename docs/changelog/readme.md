@@ -1,5 +1,12 @@
 # Change Log
 ---------------
+### 2020.04.30
+* Pixiv Weekly v1.4.1 发布~：[download...](https://media.yuzu-hime.fun/pixiv_weekly.v1.4.1.apk)
+* 发布文章 [记一次正则表达式实践](https://segmentfault.com/a/1190000022417485)
+* 发布文章 [使用nativejs刷新安卓Media Store](https://ask.dcloud.net.cn/article/37160)
+* 增加笔记 [利用谷歌API获取Youtube视频分类示例](/other/note.html#python利用谷歌api获取youtube视频分类示例)
+* 其他update
+
 ### 2020.03.31
 * Pixiv Weekly v1.3 发布~：[download...](https://media.yuzu-hime.fun/pixiv_weekly.v1.3.apk)
 * 其他update

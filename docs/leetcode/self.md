@@ -58,3 +58,30 @@ def lengthOfLongestSubstring(self, s: str) -> int:
         res = current if len(res) < len(current) else res
     return len(res)
 ```
+
+### 5. [longest palindromic substring](https://leetcode-cn.com/problems/longest-palindromic-substring)
+```py
+# 暴力法...(可能超时...)
+def longestPalindrome(self, s: str) -> str:
+    res = current = ''
+    for i in range(len(s)):
+        current = s[i]
+        for second in s[i+1:]:
+            current += second
+            if current[::-1] == current:
+                res = current if len(res) < len(current) else res
+    return res if res else current
+```
+
+### 7. [reverse integer](https://leetcode-cn.com/problems/reverse-integer)
+```
+# 通过字符串反转...
+def reverse(self, x: int) -> int:
+    if x is 0: return 0
+    sign = 1 if x > 0 else -1
+    x = str(x)[::-1]
+    x = int(x if sign is 1 else x[:-1])
+    out = (x < -2 ** 31 or x > (2 ** 31 - 1))
+
+    return 0 if out else x * sign
+```
