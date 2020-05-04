@@ -97,7 +97,7 @@ export default {
       border-left none
 
 .sidebar-heading
-  color $textColor
+  color #abd1c6
   transition color .15s ease
   cursor pointer
   font-size 1.1em
@@ -109,7 +109,7 @@ export default {
   margin 0
   border-left 0.25rem solid transparent
   &.open, &:hover
-    color inherit
+    color #f9bc60
   .arrow
     position relative
     top -0.12em
@@ -117,10 +117,10 @@ export default {
   &.clickable
     &.active
       font-weight 600
-      color $accentColor
+      color #f9bc60
       border-left-color $accentColor
     &:hover
-      color $accentColor
+      color #f9bc60
 
 .sidebar-group-items
   transition height .1s ease-out

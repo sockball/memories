@@ -14,8 +14,17 @@
 ## UnicodeDecodeError: 'gbk' codec can't decode byte 0x80
 * **环境：** **Windows10** **Python3.6**
 * **堆栈：**
-```
-```
+    ```
+    Exception in thread Thread-1:
+    Traceback (most recent call last):
+      File "D:\Works\python3\lib\threading.py", line 917, in _bootstrap_inner
+        self.run()
+      File "D:\Works\python3\lib\threading.py", line 865, in run
+        self._target(*self._args, **self._kwargs)
+      File "D:\Works\python3\lib\subprocess.py", line 1238, in _readerthread
+        buffer.append(fh.read())
+    UnicodeDecodeError: 'gbk' codec can't decode byte 0x80 in position 41: illegal multibyte sequence
+    ```
 
 * **描述：**  
     编码问题...

@@ -7,6 +7,7 @@
 * [debug javascript with chrome devtools](https://codeburst.io/learn-how-to-debug-javascript-with-chrome-devtools-9514c58479db)
 * [iconfont使用教程](https://segmentfault.com/a/1190000012213278)
 * [配色方案](https://colorhunt.co/)
+* [页面配色方案](https://www.happyhues.co/palettes/10)
 * [渐变色示例](https://uigradients.com/)
 * [概念性页面加载动画](https://medium.com/@ann.green/loading-indicators-e9d9ac9680b)
 * [Web前端开发评测系统](http://scriptoj.mangojuice.top/)

@@ -6,6 +6,9 @@
 * [简单物流整合包](https://github.com/sockball/logistics)
 * [Yii2与Oracle的回顾](https://www.jianshu.com/p/4dcf4b1c527e)
 * [简单多功能live2d...](https://github.com/sockball/live2d-widget.js)
+* Pixiv Weekly [download](https://media.yuzu-hime.fun/pixiv_weekly.v1.4.1.apk)
+* [使用nativejs刷新安卓Media Store](https://ask.dcloud.net.cn/article/37160)
+* [记一次正则表达式实践](https://segmentfault.com/a/1190000022417485)
 
 ### TODO LIST
 
