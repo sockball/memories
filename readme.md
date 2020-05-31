@@ -49,11 +49,18 @@
     * [魏曦Python基础](https://yuzu-hime.fun/book/weixi_python.html)
     * [魏曦Python面向对象开发](https://yuzu-hime.fun/book/weixi_python_oop.html)
     * **廖雪峰Python教程**
-        * [Part I](https://yuzu-hime.fun/book/liaoxuefeng_python_1.html)
-        * [Part II](https://yuzu-hime.fun/book/liaoxuefeng_python_2.html)
-        * [Part III](https://yuzu-hime.fun/book/liaoxuefeng_python_3.html)
-        * [Part IV](https://yuzu-hime.fun/book/liaoxuefeng_python_4.html)
-        * [Part V](https://yuzu-hime.fun/book/liaoxuefeng_python_5.html)
+        * [Part I](https://yuzu-hime.fun/book/liaoxuefeng_python/1.html)
+        * [Part II](https://yuzu-hime.fun/book/liaoxuefeng_python/2.html)
+        * [Part III](https://yuzu-hime.fun/book/liaoxuefeng_python/3.html)
+        * [Part IV](https://yuzu-hime.fun/book/liaoxuefeng_python/4.html)
+        * [Part V](https://yuzu-hime.fun/book/liaoxuefeng_python/5.html)
+    * **Linux高性能服务器编程**
+        * [第1章](https://yuzu-hime.fun/book/high_performance_linux_server_programming/1.html)
+        * [第2章](https://yuzu-hime.fun/book/high_performance_linux_server_programming/2.html)
+        * [第3章](https://yuzu-hime.fun/book/high_performance_linux_server_programming/3.html)
+        * [第4章](https://yuzu-hime.fun/book/high_performance_linux_server_programming/4.html)
+        * [第5-7章](https://yuzu-hime.fun/book/high_performance_linux_server_programming/5-7.html)
+        * [第8章](https://yuzu-hime.fun/book/high_performance_linux_server_programming/8.html)
 
 * **语言**
     * [アクセルワールド22](https://yuzu-hime.fun/language/accel_world_22.html)

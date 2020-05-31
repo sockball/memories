@@ -1,5 +1,9 @@
 # Change Log
 ---------------
+### 2020.05.31
+* 增加读书笔记 [Linux高性能服务器编程](/book/high_performance_linux_server_programming/1.html)
+* 其他update
+
 ### 2020.04.30
 * Pixiv Weekly v1.4.1 发布~：[download...](https://media.yuzu-hime.fun/pixiv_weekly.v1.4.1.apk)
 * 发布文章 [记一次正则表达式实践](https://segmentfault.com/a/1190000022417485)
@@ -17,14 +21,14 @@
 * 其他update
 
 ### 2020.01.12
-* 增加 [廖雪峰Python教程笔记 PartIV](/book/liaoxuefeng_python_4.html)
-* 增加 [廖雪峰Python教程笔记 PartV](/book/liaoxuefeng_python_5.html)
+* 增加 [廖雪峰Python教程笔记 PartIV](/book/liaoxuefeng_python/4.html)
+* 增加 [廖雪峰Python教程笔记 PartV](/book/liaoxuefeng_python/5.html)
 * 增加笔记 [MySQL自增主键差异](/mysql/#关于自增主键)
 * 其他update
 
 ### 2019.12.29
 * [FreeSSL](https://freessl.cn/) 升级HTTPS
-* 增加 [廖雪峰Python教程笔记 PartIII](/book/liaoxuefeng_python_3.html)
+* 增加 [廖雪峰Python教程笔记 PartIII](/book/liaoxuefeng_python/3.html)
 * 增加linux错误笔记 [Too many levels of symbolic links](/linux/error.html#too-many-levels-of-symbolic-links)
 * 增加python错误笔记 [Could not find an available JavaScript runtime](/python/error.html#could-not-find-an-available-javascript-runtime)
 * 其他update
@@ -38,7 +42,7 @@
 * 增加php笔记 [静态修饰符static与继承](/php/static_and_inherit.html)
 * 增加php错误笔记 [cURL error 60](/php/error.html#curl-error-60-ssl-certificate-problem)
 * 增加 [python面向对象笔记](/book/weixi_python_oop.html)
-* 增加 [廖雪峰Python教程笔记](/book/liaoxuefeng_python_1.html)
+* 增加 [廖雪峰Python教程笔记](/book/liaoxuefeng_python/1.html)
 * linux、git笔记、文章更新等
 
 ### 2019.10.28

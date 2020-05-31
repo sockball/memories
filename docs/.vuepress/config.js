@@ -79,14 +79,26 @@ module.exports = {
                         title: '廖雪峰Python教程',
                         collapsable: true,
                         children: [
-                            ['/book/liaoxuefeng_python_1', 'Part I'],
-                            ['/book/liaoxuefeng_python_2', 'Part II'],
-                            ['/book/liaoxuefeng_python_3', 'Part III'],
-                            ['/book/liaoxuefeng_python_4', 'Part IV'],
-                            ['/book/liaoxuefeng_python_5', 'Part V'],
+                            ['/book/liaoxuefeng_python/1', 'Part I'],
+                            ['/book/liaoxuefeng_python/2', 'Part II'],
+                            ['/book/liaoxuefeng_python/3', 'Part III'],
+                            ['/book/liaoxuefeng_python/4', 'Part IV'],
+                            ['/book/liaoxuefeng_python/5', 'Part V'],
                         ],
                     },
                     ['/book/php_docs', 'PHP手册'],
+                    {
+                        title: 'Linux高性能服务器编程',
+                        collapsable: true,
+                        children: [
+                            ['/book/high_performance_linux_server_programming/1', '第1章 TCP/IP协议族'],
+                            ['/book/high_performance_linux_server_programming/2', '第2章 IP协议详解'],
+                            ['/book/high_performance_linux_server_programming/3', '第3章 TCP协议详解'],
+                            ['/book/high_performance_linux_server_programming/4', '第4章 TCP/IP通信案例'],
+                            ['/book/high_performance_linux_server_programming/5-7', '第5-7章'],
+                            ['/book/high_performance_linux_server_programming/8', '第8章 高性能服务器程序框架'],
+                        ],
+                    },
                 ]
             },
             {

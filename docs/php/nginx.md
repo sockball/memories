@@ -149,3 +149,16 @@ location /json_ip {
 ```
 
 * [参考](https://www.ecalamia.com/blog/show-ip-api-nginx/)
+
+## 设置HTTP_BASIC验证
+```nginx
+# htpasswd -c /data/http_basic_auth.txt [username]
+
+server {
+    ...
+
+    # 此条似乎没用...
+    auth_basic "用户验证提示";
+    auth_basic_user_file /data/http_basic_auth.txt;
+}
+```

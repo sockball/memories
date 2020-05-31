@@ -14,6 +14,7 @@
 * [CSS特效](https://cssfx.dev)
 * [JS事件委托](https://zhuanlan.zhihu.com/p/26536815)
 * [vue权限路由实现方式总结](https://juejin.im/post/5b5bfd5b6fb9a04fdd7d687a#heading-12)
+* [CSS实现圆形的各种方法](https://cloudfour.com/thinks/css-circles)
 
 ## Web后端
 
@@ -45,6 +46,7 @@
 * [Python中异步协程的使用方法介绍](https://cuiqingcai.com/6160.html)
 * [python中使用tor代理](https://nladuo.github.io/2016/07/17/python%E4%B8%AD%E4%BD%BF%E7%94%A8tor%E4%BB%A3%E7%90%86/)
 * [golangbot](https://www.yuque.com/ksco/golangbot-cn/rktgg7)
+* [101道numpy测试题](https://www.machinelearningplus.com/python/101-numpy-exercises-python)
 
 ## Web其他
 
@@ -100,6 +102,11 @@
 * [Searx 私人搜索引擎](https://www.moerats.com/archives/875)
 * [彩云小译(双语)](https://github.com/ruanyf/weekly/issues/910)
 * [匿名分享文件](https://onionshare.org)
+* [网站监控服务raileo](https://raileo.com)
+* [各种速查表](https://devhints.io)
+* [基于IPFS的电子书搜索引擎](https://book.tstrs.me)
+* [在线音频实时剪辑转码](https://www.xaudiopro.com/cn/)
+* [screen to gif](https://github.com/NickeManarin/ScreenToGif)
 
 ## Funny
 
@@ -144,6 +151,9 @@
 * [CSS Animation Libraries](https://css-tricks.com/css-animation-libraries)
 * [各大语言JSON解析器最大嵌套层数](https://github.com/lovasoa/bad_json_parsers)
 * [滚动条的变化历史](https://scrollbars.matoseb.com)
+* [The Deep Sea](https://neal.fun/deep-sea)
+* [模拟萤火虫](https://ncase.me/fireflies)
+* [办公室噪音...](https://mynoise.net/NoiseMachines/openOfficeNoiseGenerator.php)
 
 ## 书籍
 
